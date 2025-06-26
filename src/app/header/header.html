@@ -1,0 +1,121 @@
+<nav class="navbar navbar-expand-lg custom-bg">
+  <div class="container-fluid">
+    <a class="logo-container d-flex align-items-center text-decoration-none" routerLink="/home">
+      <img src="RLT-Logo.png" alt="RLT Logo" class="rlt-police-academy me-2" />
+      <div class="logo-text">
+        <span class="logo-title-1">RLT Police Training Academy</span><br />
+        <span class="logo-title-2">Best Academy for Uniform services</span>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            TNUSRB
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/tnusrb-police-constable" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">TNUSRB - Police Constable</a></li>
+            <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">TNUSRB - Sub Inspector</a></li>
+            <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-finger-print"
+                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">TNUSBR - Sub Inspector (
+                Finger Print )</a></li>
+            <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-technical" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">TNUSBR - Sub Inspector ( Technical )</a></li>
+            <li><a class="dropdown-item" routerLink="/tnusrb-watcher" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Watcher</a></li>
+            <li><a class="dropdown-item" routerLink="/tnusrb-guard" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Guard</a></li>
+            <li><a class="dropdown-item" routerLink="/tnusrb-forester" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Forester</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Indian Army
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/NDA-Exam" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">NDA Exam</a></li>
+            <li><a class="dropdown-item" routerLink="/CDS-Exam" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">CDS Exam</a></li>
+            <li><a class="dropdown-item" routerLink="/army-general-duty" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Army General Duty</a></li>
+            <li><a class="dropdown-item" routerLink="/army-tradesman" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Army Tradesman</a></li>
+            <li><a class="dropdown-item" routerLink="/army-nursing-assistant" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Army Nursing Assistant</a></li>
+            <li><a class="dropdown-item" routerLink="/army-soldier-clerk" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Army Soldier Clerk / Store Keeper Technical</a></li>
+            <li><a class="dropdown-item" routerLink="/army-technical" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Army Technical</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Indian Navy
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/navy-mr" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Navy MR</a></li>
+            <li><a class="dropdown-item" routerLink="/navy-technical-ssr" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Navy Technical SSr</a></li>
+            <li><a class="dropdown-item" routerLink="/navy-technical-aa" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Navy Technical AA</a></li>
+            <li><a class="dropdown-item" routerLink="/indian-coast-guard" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Indian Coast Guard</a></li>
+            <li><a class="dropdown-item" routerLink="/indian-coast-guard-navik-gd" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Indian Coast Guard Navik ( GD )</a></li>
+            <li><a class="dropdown-item" routerLink="/indian-coast-guard-navik-db" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Indian Coast Guard Navik ( DB )</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Indian Air Force
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/indian-air-force-group-x-y" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Indian Air Force ( Group X & Y )</a></li>
+            <li><a class="dropdown-item" routerLink="/indian-air-force-group-x" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Indian Air Force ( Group X )</a></li>
+            <li><a class="dropdown-item" routerLink="/indian-air-force-group-y" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">Indian Air Force ( Group Y )</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Other Uniform Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/rpf-sub-inspector" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">RPF - Sub Inspector</a></li>
+            <li><a class="dropdown-item" routerLink="/rpf-police-constable" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">RPF - Police Constable</a></li>
+            <li><a class="dropdown-item" routerLink="/bsf-tradesman" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">BSF - Tradesman</a></li>
+            <li><a class="dropdown-item" routerLink="/bsf-gd" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">BSF - GD</a></li>
+            <li><a class="dropdown-item" routerLink="/crpf-constable-gd" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">CRPF - Constable ( GD )</a></li>
+            <li><a class="dropdown-item" routerLink="/crpf-tradesman" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">CRPF - Tradesman</a></li>
+            <li><a class="dropdown-item" routerLink="/ssc-mts" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">SSC - MTS</a></li>
+            <li><a class="dropdown-item" routerLink="/ssc-gd" routerLinkActive="active-dropdown"
+                [routerLinkActiveOptions]="{ exact: true }">SSC - GD</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

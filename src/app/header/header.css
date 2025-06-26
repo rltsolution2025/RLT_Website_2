@@ -1,0 +1,154 @@
+.custom-bg {
+  background-color: rgb(5, 5, 139);
+  box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
+}
+
+.nav-link {
+  color: rgb(183, 190, 196);
+  font-size: large;
+  font-weight: bold;
+  padding-right: 100px;
+}
+
+.nav-link:hover {
+  color: rgb(175, 41, 41);
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 10px;
+  /* Optional: Adjust spacing */
+}
+
+/* Optional: for smooth hover */
+.dropdown-menu {
+  transition: all 0.3s ease;
+}
+
+.active-link {
+  color: rgb(235, 8, 8);
+  font-weight: bold;
+  font-size: large;
+}
+
+.nav-item {
+  padding-right: 20px;
+}
+
+/* Style the dropdown menu container */
+.dropdown-menu {
+  background-color: #d8bdbd;
+  /* Change menu background */
+  border: 1px solid #0d6efd;
+  /* Optional: blue border */
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 10px;
+  box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
+  /* Add shadow */
+  margin-top: 10px;
+}
+
+/* Style each item inside dropdown */
+.dropdown-item {
+  color: #0d6efd;
+  /* Blue text */
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  /* Optional: round edges on hover */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+  background-color: #e9f0ff;
+  /* Light blue on hover */
+  color: #8a1919;
+  /* Text on hover */
+}
+
+.dropdown-menu {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.muppadai-logo {
+  width: 200px;
+  height: 50px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.active-dropdown {
+  background-color: #0d6efd;
+  /* Blue background */
+  color: white;
+  /* White text */
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  /* Optional spacing adjustment */
+}
+
+.navbar-nav .dropdown-toggle::after {
+  transition: transform 0.2s ease;
+}
+
+.navbar-nav .dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+  /* Optional animation */
+}
+
+.active-dropdown>.nav-link,
+.active-dropdown .dropdown-item.active-dropdown {
+  background-color: #0d6efd !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.rlt-police-academy {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+
+.logo-text {
+  line-height: 1.2;
+}
+
+.logo-title-1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.logo-title-2 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #dcdcdc;
+  padding-left: 10px;
+}
