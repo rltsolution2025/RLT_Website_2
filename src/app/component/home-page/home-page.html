@@ -1,22 +1,32 @@
 <div id="carouselExampleFade" class="carousel slide carousel-fade custom-carousel" data-bs-ride="carousel" #myCarousel>
+  <!-- scrolling-notification.component.html -->
+<div class="notification-wrapper">
+  <div class="scrolling-text">
+    🚨 Admission Open! Join RLT TriForce Academy Today! Limited seats available!  <span class="blink-highlight">Enroll Now !!!</span>
+  </div>
+</div>
+
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="training 1.jpg" class="d-block" alt="...">
+      <img src="triforce.png" class="d-block" alt="...">
+    </div>
+    <div class="carousel-item active">
+      <img src="image.png" class="d-block" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="training 2.jpg" class="d-block" alt="...">
+      <img src="images-police.png" class="d-block" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="training 3.jpg" class="d-block" alt="...">
+      <img src="fire1.png" class="d-block" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="training 4.jpg" class="d-block" alt="...">
+      <img src="air3.png" class="d-block" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="training 5.jpg" class="d-block" alt="...">
+      <img src="navy2.png" class="d-block" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="training 6.jpg" class="d-block" alt="...">
+      <img src="navy1.png" class="d-block" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -31,34 +41,36 @@
 <div class="container">
   <div class="head">
     <p class="title">
-      WELCOME TO<br>
-      <span class="muppadi-text">RLT - Police</span>
-      <span class="academy-text">Training Academy</span>
+      <span class="welcome">Welcome To!<br></span>
+      <span class="muppadi-text">RLT National</span>
+      <span class="academy-text">Defence Academy</span>
+      
     </p>
   </div>
   <div class="main-container">
     <div class="content">
       <span class="content-text">
-        <strong>RLT - Police Training Academy</strong> is a No.1 Defence Training Academy in Tamilnadu, we specialise in
-        providing top-notch coaching for central and state government examinations, tailored for 10th, 12th-grade
-        graduates and degree holders.
+        <strong>RLT Police Training Academy </strong>
+        stands tall as Tamil Nadu’s No.1 Defence and Uniformed Services Coaching Centre. 
+        We specialize in delivering top-tier training for Central and State Government competitive examinations, tailored for <strong>10th, 12th, and graduate-level aspirants.</strong>
         <br><br>
-        Our comprehensive training programs include intensive coaching for exams like <strong>Police, Army, Navy,
-          Airforce, SSC, RRB, NDA, CDSE, ASSISTANT COMMANDO</strong> and other various government competitive
-        examinations. We believe in a holistic approach to <strong> education,</strong> combining rigorous
-        <strong>academic preparation with physical fitness training,</strong> personality development, and leadership
-        skills to ensure our students are well-rounded and ready for any challenge.
+       At RLT, we provide comprehensive coaching for: <strong>
+Police, Army, Navy, Air Force, SSC, RRB, NDA, CDS, Assistant Commandant, and various other Government competitive exams.</strong>
+We combine academic excellence with physical training, personality development, and leadership grooming—preparing every candidate not just to crack exams, 
+but to serve the nation with confidence and integrity.
         <br><br>
+        
         With state-of-the-art facilities, regular mock tests, and interactive classroom sessions, we empower you to
         achieve your dreams of serving the nation. We are proud to offer Quality Education with our three branches –
         Vellore, Trichy, Virudhunagar. Join us! Unlock your potential, serve the nation, and become a leader of
         tomorrow.
         <br><br>
-        <span class="bottom-content-text">Your Journey to Success Starts Here !!</span>
+        
       </span>
     </div>
     <div class="form">
-      <h2>Enquiry Form</h2>
+
+      <h2 class="form-heading"><span>For Enquiry!</span></h2>
 
       <form #form="ngForm" (ngSubmit)="onSubmit()" novalidate>
 
@@ -91,6 +103,7 @@
           <option value="tnusrb-si">TNUSRB SI</option>
           <option value="army">Indian Army</option>
           <option value="navy-airforce">Indian Navy / Air Force</option>
+          
         </select>
         <div *ngIf="course.invalid && course.touched" style="color:red;">
           Course selection required
@@ -116,10 +129,12 @@
       </form>
 
       <div *ngIf="formSubmitted" style="color: green; margin-top: 10px;">
-        ✅ Thank you for your enquiry! We will contact you soon.
+        Thank you for your enquiry! 
+        <br>We will contact you soon.
       </div>
     </div>
-    <div class="blurb-container">
+<span class="bottom-content-text ">Your Journey to Success Starts Here !!</span>
+    <!-- <div class="blurb-container">
       <div class="blurb-img">
         <img src="play-btn1 (1).png" alt="" class="icon-images">
         <span class="blurb-title"> 3,000+ Youtube Videos</span>
@@ -132,11 +147,11 @@
         <img src="checked1-btn.png" alt="" class="icon-images">
         <span class="blurb-title"> Trusted by 25,000+ Students</span>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 <!--Youtube Section-->
-<div class="youtube-section">
+<!-- <div class="youtube-section">
   <div class="youtube-header">OUR YOUTUBE VIDEOS</div>
   <div class="youtube-sub-header">
     <img src="youtube-subscribers.png" alt="Subscribers Icon">
@@ -183,11 +198,36 @@
   <div class="watch-all-container">
     <a href="https://www.youtube.com/@YourChannelName" target="_blank" class="watch-all-button">Watch All Videos</a>
   </div>
+</div> -->
+
+<!-- <div class="card" style="width: 18rem;">----card component
+  <img src="assets/sample-image.jpg" class="card-img-top" alt="Card image">
+  <div class="card-body">
+    <h5 class="card-title">Card Title</h5>
+    <p class="card-text">
+      This is a short description or content related to the image. You can customize it as needed.
+    </p>
+    <a routerLink="/more-info" class="btn btn-primary">Learn More</a>
+  </div>
+</div> -->
+
+<div class="container my-4">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let item of cards">
+      <div class="card h-100 shadow-sm">
+        <img [src]="item.image" class="card-img-top" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <a [routerLink]="item.link" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
-
-<div #testimonialCarousel id="testimonialCarousel" class="carousel slide student-testimonials" data-bs-ride="carousel">
+<!-- <div #testimonialCarousel id="testimonialCarousel" class="carousel slide student-testimonials" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item" *ngFor="let t of testimonials; let i = index" [class.active]="i === 0">
       <div class="student-content text-center p-4">
@@ -207,7 +247,7 @@
     <span class="carousel-control-next-icon"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div> -->
 
 <div class="join-us-today">
   <div class="join-us-text">
@@ -219,5 +259,5 @@
     </span>
   </div>
   <div class="contact-button">
-    <button routerLink="/contact">Contact Now !</button>
+    <button routerLink="/contact">Join Now !</button>
   </div>
