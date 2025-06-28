@@ -9,6 +9,7 @@ import {
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { Api } from '../../services/api';
 
 @Component({
   selector: 'app-home-page',
@@ -17,7 +18,7 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./home-page.css'],
   imports: [
     CommonModule,
-    FormsModule,RouterLink
+    FormsModule,RouterLink,
   ]
 })
 export class HomePage implements AfterViewInit {
@@ -140,7 +141,8 @@ cards = [
       link: '/mock-tests'
     }
   ];
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiServices:Api) {}
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -207,12 +209,22 @@ cards = [
     }
   }
 
-  onSubmit() {
+  onSubmit(form:any) {
     this.formSubmitted = true;
     console.log('Form Data:', this.user);
 
     setTimeout(() => {
       this.formSubmitted = false;
     }, 5000);
+    const formData = form.value;
+    this.apiServices.submitForm(formData).subscribe({
+      next: (res:any) => {
+        console.log('Form submitted!', res);
+      },
+      error: (err:any) => {
+        console.error('Error submitting form', err);
+      }
+    });
   }
+  
 }

@@ -72,7 +72,7 @@
 
       <h2 class="form-heading"><span>For Enquiry!</span></h2>
 
-      <form #form="ngForm" (ngSubmit)="onSubmit()" novalidate>
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
 
         <input type="text" name="name" [(ngModel)]="user.name" placeholder="Your Name" required #name="ngModel" />
         <div *ngIf="name.invalid && name.touched" style="color:red;">
