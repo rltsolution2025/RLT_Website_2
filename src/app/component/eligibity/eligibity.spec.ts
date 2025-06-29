@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NgModule } from '@angular/core';
 import { Eligibity } from './eligibity';
 
 describe('Eligibity', () => {
@@ -8,7 +8,7 @@ describe('Eligibity', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Eligibity]
+      declarations: [Eligibity]
     })
     .compileComponents();
 

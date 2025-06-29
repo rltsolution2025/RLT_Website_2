@@ -1,4 +1,4 @@
-.custom-bg {
+ .custom-bg {
   /* background-color: rgb(5, 5, 139); */
   box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
   background: linear-gradient(to bottom, #4facfe, #0026fe);
@@ -165,4 +165,14 @@ color:#1A237E ;
   font-weight: 400;
   color: #dcdcdc;
   padding-left: 10px;
+}
+@media (max-width: 991.98px) {
+  /* Prevent dropdowns from auto-opening on hover in small screens */
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .navbar-nav .dropdown-toggle::after {
+    transform: none !important;
+  }
 }
