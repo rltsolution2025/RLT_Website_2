@@ -57,3 +57,18 @@
 .move{
   margin-left: 50px;
 }
+ @media (max-width: 991.98px){
+  /* .move-right{
+     margin-left: 10px;
+  } */
+  .medium{
+    display: flex;
+  }
+  /* .move{
+    margin-left: 90px;
+  } */
+  .medium-icon{
+    display: none;
+  }
+   
+}

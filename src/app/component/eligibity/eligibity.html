@@ -1,1 +1,44 @@
-<p>eligibity works!</p>
+<!-- Add FormsModule to your module for ngModel to work -->
+
+<div class="d-flex justify-content-center my-4">
+  <div class="d-flex gap-4">
+    <div class="d-flex align-items-center gap-2">
+      <label class="form-label mb-0">Education:</label>
+      <select class="form-select" style="width: 150px;" [(ngModel)]="selectedEducation">
+        <option value="">All</option>
+        <option value="8th">8th</option>
+        <option value="10th">10th</option>
+        <option value="12th">12th</option>
+        <option value="UG">UG</option>
+        <!-- <option value="PG">PG</option> -->
+      </select>
+    </div>    
+  </div>
+</div>
+
+<!-- Filtered Card Section -->
+<div class="container my-4">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+    <div class="col" *ngFor="let item of filteredCourses()">
+      <div class="card h-100 shadow-sm">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <img [src]="item.image" class="card-img-top" alt="Card image">
+        <div class="card-body">
+          <h5 style="color: rgb(16, 58, 148); font-weight: 700;"  class="card-subtitle">{{ item.designation }}</h5><br>
+          <p class="card-text" ><strong >Education:</strong> {{ item.Education }}</p>
+          <p class="card-text"><strong>Age:</strong> </p>
+          <ul class="mb-2" style="list-style-type:disc; padding-left: 3rem; font-size: 14px;">
+               <li ><strong >General:</strong> {{ item.Age.category.general }}</li>
+               <li><strong>BC/MBC:</strong> {{ item.Age.category.bc_mbc }}</li>
+               <li><strong>SC/ST:</strong> {{ item.Age.category.sc_st }}</li>
+               <li><strong>Transgender:</strong> {{ item.Age.category.Transgender }}</li>
+               <li><strong>Widows:</strong> {{ item.Age.category.Widows }}</li>
+               <li><strong>Ex-Servicemen:</strong> {{ item.Age.category.ex_service_man }}</li>
+           </ul>
+          <p class="card-text"><strong>Recruitment:</strong> {{ item.Recruitment }}</p>
+          <a [routerLink]="item.link" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -26,6 +26,16 @@ export class HomePage implements AfterViewInit {
   @ViewChild('testimonialCarousel') testimonialCarousel!: ElementRef;
 
   formSubmitted = false;
+isPopupOpen = false;
+
+openPopup() {
+  this.isPopupOpen = true;
+}
+
+closePopup() {
+  this.isPopupOpen = false;
+}
+
 
   user = {
     name: '',
@@ -78,67 +88,67 @@ cards = [
       image: '/police.png',
       title: 'Police Coaching',
       description: 'Expert training for Police exams including TNUSRB and RPF.',
-      link: '/police-coaching'
+      link: '/register-form'
     },
     {
       image: '/army.png',
       title: 'Army Recruitment',
       description: 'Join our Army coaching program to crack GD, Clerk, and Technical roles.',
-      link: '/army-coaching'
+      link: '/register-form'
     },
     {
       image: '/navy.png',
       title: 'Navy Training',
       description: 'Prepare for MR, SSR, AA exams with our Navy training program.',
-      link: '/navy-training'
+      link: '/register-form'
     },
     {
       image: '/air-force.png',
       title: 'Air Force X & Y',
       description: 'Crack Group X and Y exams with our professional coaching.',
-      link: '/airforce-coaching'
+      link: '/register-form'
     },
     {
       image: '/nda.png',
       title: 'NDA / CDS',
       description: 'Crack UPSC NDA & CDS with our focused coaching modules.',
-      link: '/nda-cds-training'
+      link: '/register-form'
     },
     {
       image: '/capf.png',
       title: 'Assistant Commandant',
       description: 'Guidance for CAPF Assistant Commandant entrance exams.',
-      link: '/assistant-commandant'
+      link: '/register-form'
     },
     {
       image: '/crpf.png',
       title: 'CRPF & BSF',
       description: 'Expert training for Central Armed Police Forces like CRPF and BSF.',
-      link: '/crpf-bsf-training'
+      link: '/register-form'
     },
     {
       image: '/ssc.png',
       title: 'SSC - GD & MTS',
       description: 'Start your SSC journey with GD & MTS focused preparation.',
-      link: '/ssc-gd-mts'
+      link: '/register-form'
     },
     {
       image: '/physical.png',
       title: 'Physical Training',
       description: 'Get physically ready with our daily fitness training sessions.',
-      link: '/physical-training'
+      link: ''
     },
     {
       image: '/online.png',
       title: 'Online Classes',
       description: 'Join our virtual classrooms for live coaching sessions.',
-      link: '/online-classes'
+      link: ''
     },
     {
       image: '/mock.png',
       title: 'Mock Exams',
       description: 'Regular mock tests and assessments to track your progress.',
-      link: '/mock-tests'
+      link: ''
     }
   ];
 

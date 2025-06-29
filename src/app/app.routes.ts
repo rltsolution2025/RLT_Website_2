@@ -33,8 +33,9 @@ import { SSCGD } from './component/ssc-gd/ssc-gd';
 import { Footer } from './footer/footer';
 import { Header } from './header/header';
 import { TnusrbGuard } from './component/tnusrb-guard/tnusrb-guard';
-import { ContactUs } from './component/contact-us/contact-us';
+import { Contact } from './component/contact/contact';
 import { Eligibity } from './component/eligibity/eligibity';
+import { RegisterForm } from './component/register-form/register-form';
 
 
 export const routes: Routes = [
@@ -72,7 +73,8 @@ export const routes: Routes = [
     {path:'ssc-gd', component:SSCGD},
     {path:'header', component:Header},
     {path:'footer',component:Footer},
-    {path:'contact',component:ContactUs},
+    {path:'contact',component:Contact},
     {path:'eligible', component:Eligibity},
+    {path:'register-form',component:RegisterForm},
     {path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
