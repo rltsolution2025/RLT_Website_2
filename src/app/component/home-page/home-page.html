@@ -42,15 +42,15 @@
   <div class="head">
     <p class="title">
       <span class="welcome">Welcome To!<br></span>
-      <span class="muppadi-text">RLT National</span>
-      <span class="academy-text">Defence Academy</span>
+      <span class="muppadi-text">RLT TriForce</span>
+      <span class="academy-text"> Academy</span>
       
     </p>
   </div>
   <div class="main-container">
     <div class="content">
       <span class="content-text">
-        <strong>RLT Police Training Academy </strong>
+        <strong>RLT Tri Force Training Academy </strong>
         stands tall as Tamil Nadu’s No.1 Defence and Uniformed Services Coaching Centre. 
         We specialize in delivering top-tier training for Central and State Government competitive examinations, tailored for <strong>10th, 12th, and graduate-level aspirants.</strong>
         <br><br>
@@ -84,7 +84,7 @@
           Valid email required
         </div>
 
-        <input type="tel" name="phone" [(ngModel)]="user.phone" placeholder="Phone Number" required #phone="ngModel" />
+        <input type="tel" name="phone" [(ngModel)]="user.number" placeholder="Phone Number" required #phone="ngModel" />
         <div *ngIf="phone.invalid && phone.touched" style="color:red;">
           Phone number required
         </div>
@@ -98,7 +98,7 @@
 
         <!-- Course -->
         <select name="course" [(ngModel)]="user.course" required #course="ngModel">
-          <option value="">Select Course</option>
+          <option value="" selected>Select Course</option>
           <option value="tnusrb-pc">TNUSRB PC</option>
           <option value="tnusrb-si">TNUSRB SI</option>
           <option value="army">Indian Army</option>

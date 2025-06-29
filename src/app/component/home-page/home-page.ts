@@ -7,7 +7,7 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Api } from '../../services/api';
 
@@ -30,7 +30,7 @@ export class HomePage implements AfterViewInit {
   user = {
     name: '',
     email: '',
-    phone: '',
+    number: '',
     district: '',
     course: '',
     join: '',
@@ -209,22 +209,24 @@ cards = [
     }
   }
 
-  onSubmit(form:any) {
-    this.formSubmitted = true;
-    console.log('Form Data:', this.user);
-
-    setTimeout(() => {
-      this.formSubmitted = false;
-    }, 5000);
-    const formData = form.value;
-    this.apiServices.submitForm(formData).subscribe({
-      next: (res:any) => {
-        console.log('Form submitted!', res);
-      },
-      error: (err:any) => {
-        console.error('Error submitting form', err);
-      }
-    });
+  onSubmit(form: any) {
+  if (form.invalid) {
+    console.warn('Form is invalid. Please correct the errors and try again.');
+    return;
   }
+
+  const formData = { ...this.user }; // Or use form.value if all values are synced
+
+  this.apiServices.submitForm(formData).subscribe({
+    next: (res: any) => {
+      console.log('✅ Form submitted!', res);
+      form.resetForm(); // reset form after successful submission
+    },
+    error: (err: any) => {
+      console.error('❌ Error submitting form:', err);
+    }
+  });
+}
+
   
 }
