@@ -453,6 +453,7 @@
   padding: 20px;
   display: block;
   align-items: center;
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -505,3 +506,6 @@
   border: none;
   cursor: pointer;
 }
+=======
+}
+>>>>>>> afc28ece4eae84ace066730f583b0be451fa9763
