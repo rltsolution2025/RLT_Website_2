@@ -9,10 +9,7 @@ router.post('/register', async (req, res) => {
     const { name, email, number, district, course, immediateJoiner } = req.body;
     const user = new User({ name, email, number, district, course, immediateJoiner });
     await user.save();
-<<<<<<< HEAD
     console.log(user);
-=======
->>>>>>> afc28ece4eae84ace066730f583b0be451fa9763
     res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
     console.error(error);
