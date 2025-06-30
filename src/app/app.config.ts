@@ -14,6 +14,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     importProvidersFrom(HttpClientModule),
     provideHttpClient(withInterceptorsFromDi()),
-    Api
+    Api,
+    provideHttpClient(withFetch())
   ]
 };
