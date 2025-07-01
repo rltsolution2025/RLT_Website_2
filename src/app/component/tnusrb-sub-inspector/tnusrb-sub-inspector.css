@@ -78,7 +78,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
 
-.table-flex-column table tbody tr .thead-1 {
+.table-flex-column table  tr .thead-1 {
     background-color: rgb(107, 98, 187);
     color: #ffffff;
     font-size: 15px;
@@ -86,7 +86,7 @@
     text-align: center;
 }
 
-.table-flex-column table tbody tr .thead-2 {
+.table-flex-column table  tr .thead-2 {
     background-color: rgb(107, 98, 187);
     color: #ffffff;
     font-size: 15px;
