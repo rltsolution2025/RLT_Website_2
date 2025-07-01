@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test"
   },
   "keywords": [],
   "author": "",
