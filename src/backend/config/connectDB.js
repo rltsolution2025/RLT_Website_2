@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/rlt-academy', {
+    await mongoose.connect('mongodb+srv://socialrltdigital:947yhRqQVrTd4VLr@rlt-tri-force.kdcchsc.mongodb.net/?retryWrites=true&w=majority&appName=RLT-TRI', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
