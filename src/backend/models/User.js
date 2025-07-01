@@ -7,7 +7,8 @@ const userSchema = new mongoose.Schema({
   number: String,
   district: String,
   course: String,
-  immediateJoiner: Boolean
+  specialization:String,
+  join: Boolean,
 });
 
 module.exports = mongoose.model('User', userSchema);

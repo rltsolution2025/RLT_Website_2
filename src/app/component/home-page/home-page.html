@@ -60,15 +60,15 @@
   <div class="head">
     <p class="title">
       <span class="welcome" style="font-style: italic;">Welcome To!<br></span>
-    <span style="color: rgb(13, 13, 161); ">RLT Tri Force Academy</span>  
-      
+      <span class="muppadi-text">RLT Tri Force </span>
+      <span class="academy-text">Academy</span>
       
     </p>
   </div>
   <div class="main-container">
     <div class="content">
       <span class="content-text">
-        <strong style="color: rgb(55, 30, 168);">RLT Tri Force Training Academy </strong>
+        <strong>RLT Tri Force Academy </strong>
         stands tall as Tamil Nadu’s No.1 Defence and Uniformed Services Coaching Centre. 
         We specialize in delivering top-tier training for Central and State Government competitive examinations, tailored for <strong style="color: rgb(55, 30, 168);">10th, 12th, and graduate-level aspirants.</strong>
         <br><br>
@@ -85,11 +85,11 @@
         <br><br>
         
       </span>
-      <button class="eli-btn" routerLink="/eligible">Eligibility</button>
+      <button class="eli-btn" routerLink="/eligible">Choose your course..!</button>
     </div>
-    <div class="form">
+    <div class="form" #enquiryFormSection>
 
-      <h2 class="form-heading"><span>For Enquiry!</span></h2>
+      <h2 class="form-heading" ><span>For Enquiry!</span></h2>
 
       <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
 
@@ -103,7 +103,7 @@
           Valid email required
         </div>
 
-        <input type="tel" name="phone" [(ngModel)]="user.phone" placeholder="Phone Number" required #phone="ngModel" />
+        <input type="tel" name="phone" [(ngModel)]="user.number" placeholder="Phone Number" required #phone="ngModel" />
         <div *ngIf="phone.invalid && phone.touched" style="color:red;">
           Phone number required
         </div>
@@ -117,26 +117,37 @@
 
         <!-- Course -->
         <select name="course" [(ngModel)]="user.course" required #course="ngModel">
-          <option value="">Select Course</option>
-          <option value="tnusrb-pc">TNUSRB PC</option>
-          <option value="tnusrb-si">TNUSRB SI</option>
-          <option value="army">Indian Army</option>
-          <option value="navy-airforce">Indian Navy / Air Force</option>
+          <option value="" selected>Select Course</option>
+          <option value="TNUSRB">TNUSRB </option>
+          <option value="Army">Army</option>
+          <option value="Navy">Navy</option>
+          <option value="Air Force">Air Force</option>
+          <option value="Other Uniformed Services">Other Uniformed Services</option>
           
         </select>
         <div *ngIf="course.invalid && course.touched" style="color:red;">
           Course selection required
         </div>
 
+        <div *ngIf="specializations.length > 0">
+  <select name="specialization" [(ngModel)]="user.specialization" required #specialization="ngModel">
+    <option value="" selected>Select Specialization</option>
+    <option *ngFor="let option of specializations" [value]="option">{{ option }}</option>
+  </select>
+  <div *ngIf="specialization.invalid && specialization.touched" style="color:red;">
+    Specialization required
+  </div>
+</div>
+
         <!-- Immediate Joining -->
         <div class="immediate-join">
           <label>Immediate Joining:</label><br />
           <label>
-            <input type="radio" name="join" value="yes" [(ngModel)]="user.join" required />
+            <input type="radio" name="join" [value]="true" [(ngModel)]="user.join" required />
             Yes
           </label>
           <label>
-            <input type="radio" name="join" value="no" [(ngModel)]="user.join" required />
+            <input type="radio" name="join" [value]="false" [(ngModel)]="user.join" required />
             No
           </label>
         </div>
@@ -241,7 +252,7 @@
           <p class="card-text">{{ item.description }}</p>
           <!-- <a [routerLink]="item.link" class="btn btn-primary">Apply Now</a> -->
            <ng-container *ngIf="item.link; else comingSoon">
-            <a [routerLink]="item.link" class="btn btn-primary">Apply Now</a>
+            <a  (click)="scrollToForm()"  class="btn btn-primary">Apply Now</a>
           </ng-container>
           <ng-template #comingSoon>
             <span class="btn btn-primary">Coming Soon</span>

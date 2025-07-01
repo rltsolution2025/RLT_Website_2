@@ -11,6 +11,7 @@ export class Api {
   constructor(private http:HttpClient) { }
 
   submitForm(data: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}/register`, data); // replace /enquiry with your actual endpoint
+    return this.http.post(`${this.baseUrl}/api/register`, data);
+  
   }
 }

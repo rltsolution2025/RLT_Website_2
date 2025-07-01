@@ -7,7 +7,7 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Api } from '../../services/api';
 
@@ -25,6 +25,12 @@ export class HomePage implements AfterViewInit {
   @ViewChild('myCarousel') carouselElement!: ElementRef;
   @ViewChild('testimonialCarousel') testimonialCarousel!: ElementRef;
 
+  @ViewChild('enquiryFormSection') enquiryFormSection!: ElementRef;
+
+  scrollToForm() {
+    this.enquiryFormSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
   formSubmitted = false;
 isPopupOpen = false;
 
@@ -40,10 +46,12 @@ closePopup() {
   user = {
     name: '',
     email: '',
-    phone: '',
+    number: '',
     district: '',
     course: '',
-    join: '',
+    specialization:'',
+    join: false
+    
   };
 
   testimonials = [
@@ -218,23 +226,40 @@ cards = [
       });
     }
   }
+  courseOptions: { [key: string]: string[] } = {
+    'TNUSRB': ['Police Constable', 'Sub Inspector', 'Sub Inspector-Finger Print', 'Sub Inspector-Technical','Watcher','Guard', 'Forester'],
+    'Army': ['NDA', 'CDS', 'General Duty', 'Tradesman','Nursing Assistant', 'Soldier-Clerk / Store Keeper Technical', 'Technical'],
+    'Navy': ['MR', 'Technical SSR', 'Technical AA' , ' Coast Gaurd', 'Coast Guard Navik (GD)', 'Coast Guard Navik (DB)'],
+    'Air Force': ['Indian Air Force Group X & Y', 'Indian Air Force Group X', 'Indian Air Force Group Y'],
+    'Other Uniformed Services': ['RPF-Sub Inspector', 'RPF-Police Constable', 'BSF-Tradesman', 'BSF-GD', 'CRPF-Constable (GD)', 'CRPF-Tradesman', 'SSC-MTS','SSC-GD'],
+  };
 
-  onSubmit(form:any) {
-    this.formSubmitted = true;
-    console.log('Form Data:', this.user);
-
-    setTimeout(() => {
-      this.formSubmitted = false;
-    }, 5000);
-    const formData = form.value;
-    this.apiServices.submitForm(formData).subscribe({
-      next: (res:any) => {
-        console.log('Form submitted!', res);
-      },
-      error: (err:any) => {
-        console.error('Error submitting form', err);
-      }
-    });
+  get specializations(): string[] {
+    return this.courseOptions[this.user.course] || [];
   }
+
+
+  onSubmit(form: any) {
+  if (form.invalid) {
+    console.warn('Form is invalid. Please correct the errors and try again.');
+    return;
+  }
+
+  const formData = { ...this.user }; // Or use form.value if all values are synced
+  console.log(formData);
+
+  this.apiServices.submitForm(formData).subscribe({
+    next: (res: any) => {
+      console.log('✅ Form submitted!', res);
+      this.formSubmitted = true;
+      form.resetForm(); // reset form after successful submission
+      setTimeout(()=>{this.formSubmitted = false},3000)
+    },
+    error: (err: any) => {
+      console.error('❌ Error submitting form:', err);
+    }
+  });
+}
+
   
 }
