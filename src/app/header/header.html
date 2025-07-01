@@ -1,18 +1,37 @@
+<div class="d-flex justify-content-between align-items-center px-3 py-1 bg-white text-navy">
+  <small><i class="fa-solid fa-envelope"></i>Email: <a href="mailto:info@muppadai.com" class="text-navy text-decoration-none">info&#64;muppadai.com</a></small>
+  <small><i class="fa-solid fa-phone"></i>Phone: <a href="tel:+919876543210" class="text-navy text-decoration-none">+91 98765 43210</a></small>
+</div>
+
+<!-- Main Navbar -->
 <nav class="navbar navbar-expand-lg custom-bg">
-  <div class="container-fluid">
-    <a class="logo-container d-flex align-items-center text-decoration-none" routerLink="/home">
-      <img src="RLT-Logo.png" alt="RLT Logo" class="rlt-police-academy me-2" />
-      <div class="logo-text">
-        <span class="logo-title-1">RLT Police Training Academy</span><br />
-        <span class="logo-title-2">Best Academy for Uniform services</span>
-      </div>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto">
+  <div class="container-fluid d-flex flex-column">
+
+    <!-- Logo, Text, and Toggler in same row -->
+    <div class="d-flex justify-content-between align-items-center w-100">
+      <a class="logo-container d-flex align-items-center text-decoration-none" routerLink="/home">
+        <img src="RLT-Logo.png" alt="RLT Logo" class="rlt-police-academy me-2" />
+        <div class="logo-text">
+          <span class="logo-title-1">RLT Tri Force Academy</span><br />
+          <span class="logo-title-2">Discipline. Dedication. Defence</span>
+        </div>
+      </a>
+
+      <!-- Navbar Toggler -->
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> -->
+        <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+        <!-- <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+       <ul class="navbar-nav custom-menu-left">
         <li class="nav-item">
           <a class="nav-link" routerLink="/home" routerLinkActive="active-link"
             [routerLinkActiveOptions]="{ exact: true }">Home</a>
@@ -51,7 +70,7 @@
             <li><a class="dropdown-item" routerLink="/army-general-duty" routerLinkActive="active-dropdown"
                 [routerLinkActiveOptions]="{ exact: true }">Army General Duty</a></li>
             <li><a class="dropdown-item" routerLink="/army-tradesman" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">Army Tradesman</a></li>
+                [routerLinkActiveOptions]="{ exact: true }">Army Tradesmen</a></li>
             <li><a class="dropdown-item" routerLink="/army-nursing-assistant" routerLinkActive="active-dropdown"
                 [routerLinkActiveOptions]="{ exact: true }">Army Nursing Assistant</a></li>
             <li><a class="dropdown-item" routerLink="/army-soldier-clerk" routerLinkActive="active-dropdown"
@@ -92,30 +111,27 @@
                 [routerLinkActiveOptions]="{ exact: true }">Indian Air Force ( Group Y )</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Other Uniform Services
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="/rpf-sub-inspector" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">RPF - Sub Inspector</a></li>
-            <li><a class="dropdown-item" routerLink="/rpf-police-constable" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">RPF - Police Constable</a></li>
-            <li><a class="dropdown-item" routerLink="/bsf-tradesman" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">BSF - Tradesman</a></li>
-            <li><a class="dropdown-item" routerLink="/bsf-gd" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">BSF - GD</a></li>
-            <li><a class="dropdown-item" routerLink="/crpf-constable-gd" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">CRPF - Constable ( GD )</a></li>
-            <li><a class="dropdown-item" routerLink="/crpf-tradesman" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">CRPF - Tradesman</a></li>
-            <li><a class="dropdown-item" routerLink="/ssc-mts" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">SSC - MTS</a></li>
-            <li><a class="dropdown-item" routerLink="/ssc-gd" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">SSC - GD</a></li>
-          </ul>
-        </li>
       </ul>
     </div>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+      <h5><a class="other-item" routerLink="/rpf-sub-inspector" routerLinkActive="active-dropdown"
+          [routerLinkActiveOptions]="{ exact: true }">RPF - Sub Inspector</a></h5>
+      <h5><a class="other-item" routerLink="/rpf-police-constable" routerLinkActive="active-dropdown"
+          [routerLinkActiveOptions]="{ exact: true }">RPF - Police Constable</a></h5>
+      <h5><a class="other-item" routerLink="/bsf-tradesman" routerLinkActive="active-dropdown"
+          [routerLinkActiveOptions]="{ exact: true }">BSF - Tradesman</a></h5>
+      <h5><a class="other-item" routerLink="/bsf-gd" routerLinkActive="active-dropdown"
+          [routerLinkActiveOptions]="{ exact: true }">BSF - GD</a></h5>
+      <h5><a class="other-item" routerLink="/crpf-constable-gd" routerLinkActive="active-dropdown"
+          [routerLinkActiveOptions]="{ exact: true }">CRPF - Constable ( GD )</a></h5>
+      <h5><a class="other-item" routerLink="/crpf-tradesman" routerLinkActive="active-dropdown"
+          [routerLinkActiveOptions]="{ exact: true }">CRPF - Tradesman</a></h5>
+      <h5><a class="other-item" routerLink="/ssc-mts" routerLinkActive="active-dropdown"
+          [routerLinkActiveOptions]="{ exact: true }">SSC - MTS</a></h5>
+      <h5><a class="other-item" routerLink="/ssc-gd" routerLinkActive="active-dropdown"
+          [routerLinkActiveOptions]="{ exact: true }">SSC - GD</a></h5>
+    </div>
   </div>
-</nav>
+</nav> 

@@ -1,0 +1,76 @@
+<!-- Add FormsModule to your module for ngModel to work -->
+
+<div class="d-flex justify-content-center my-4">
+  <div class="d-flex gap-4">
+    <div class="d-flex align-items-center gap-2">
+      <label class="form-label mb-0">Education:</label>
+      <select class="form-select" style="width: 150px;" [(ngModel)]="selectedEducation">
+        <option value="">All</option>
+        <option value="8th">8th</option>
+        <option value="10th">10th</option>
+        <option value="12th">12th</option>
+        <option value="UG">UG</option>
+        <!-- <option value="PG">PG</option> -->
+      </select>
+    </div>    
+  </div>
+</div>
+
+<!-- Filtered Card Section -->
+<div class="container my-4">
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col" *ngFor="let item of filteredCourses()">
+      <div class="card h-100 shadow-sm">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <img [src]="item.image" class="card-img-top" alt="Card image">
+        <div class="card-body">
+          <h5 style="color: rgb(16, 58, 148); font-weight: 700;"  class="card-subtitle">{{ item.designation }}</h5><br>
+          <p class="card-text" ><strong >Education:</strong> {{ item.Education }}</p>
+          <p class="card-text"><strong>Recruitment:</strong> {{ item.Recruitment }}</p>
+           <table class="table table-bordered" style="font-size: 14px; width: 100%;">
+  <thead >
+    <tr >
+      <th style="text-align: center; vertical-align: middle;">Category</th>
+<th style="text-align: center; ">
+  Age Limit<br>
+  <span style="font-weight: normal;">(Yrs)</span>
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>General</strong></td>
+      <td>{{ item.Age.category.general }}</td>
+    </tr>
+    <tr>
+      <td><strong>BC/MBC</strong></td>
+      <td>{{ item.Age.category.bc_mbc }}</td>
+    </tr>
+    <tr>
+      <td><strong>SC/ST</strong></td>
+      <td>{{ item.Age.category.sc_st }}</td>
+    </tr>
+    <tr>
+      <td><strong>Transgender</strong></td>
+      <td>{{ item.Age.category.Transgender }}</td>
+    </tr>
+    <tr>
+      <td><strong>Widow</strong></td>
+      <td>{{ item.Age.category.Widow }}</td>
+    </tr>
+    <tr>
+      <td><strong>Ex-Servicemen</strong></td>
+      <td>{{ item.Age.category.ex_service_man }}</td>
+    </tr>
+    <tr>
+      <td><strong>Departmental Candidate</strong></td>
+      <td>{{ item.Age.category.Departmental_candidate }}</td>
+    </tr>
+  </tbody>
+</table>
+  <a [routerLink]="item.link" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,10 +1,9 @@
 .custom-carousel {
-  width: 100%; /* ✅ Full width of the viewport */
-  height: 500px;   
-  margin: 20px 0; /* top & bottom margin only */
+  width: 100%; 
+  height: 100vh;
+  margin: 5px 0; 
   overflow: hidden;
   box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
-  border: 4px solid rgb(5, 5, 139);
   cursor: grab;
   user-select: none;
 }
@@ -12,11 +11,19 @@
 /* Ensure the image fills the carousel container */
 .custom-carousel .carousel-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100vh;
+  /* object-fit: cover; */
   border: none;
   outline: none;
 }
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.card-title {
+  font-weight: 600;
+}
+
 
 /* Remove image outline or border */
 .carousel-item img {
@@ -34,6 +41,7 @@
 .container {
   width: 100%;
   padding: 20px 10px;
+  
 }
 
 .head {
@@ -47,7 +55,9 @@
   margin: 0;
   line-height: 1.6;
 }
-
+.welcome{
+  font-size: 20px;
+}
 .muppadi-text {
   background-color: rgb(5, 5, 139);
   color: white;
@@ -83,15 +93,23 @@
 
 .bottom-content-text {
   display: block;
-  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
   font-weight: bold;
   color: #003366;
+  font-size: 30px;
+}
+
+.form-heading{
+  display: block;
+  text-align: center;
 }
 
 /* Right form box */
 .form {
   flex: 0 0 350px;
-  background: #f8f9fa;
+  background: #c1dcf7;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -344,8 +362,8 @@
   transition: height 0.3s ease;
 }
 .join-us-today {
-  background-color: rgb(152, 152, 199);
-  padding: 40px 20px;
+  background-color: rgb(3, 51, 116);
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -362,7 +380,7 @@
 
 .join-txt {
   display: block;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 8px;
@@ -374,7 +392,7 @@
 }
 
 .contact-button button {
-  background-color: rgb(5, 5, 139);
+  background-color: rgb(141, 141, 230);
   color: #fff;
   border: none;
   padding: 12px 24px;
@@ -388,3 +406,101 @@
 .contact-button button:hover {
   background-color: #050650;
 }
+/* scrolling-notification.component.css */
+.notification-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #ffffff;
+  color: #1A237E;
+  /* color: yellow; */
+  padding: 5px 0;
+  position: relative;
+}
+
+.scrolling-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.blink-highlight {
+  background-color: yellow;
+  color: red;
+  padding: 0 5px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+.card-img-top{
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  display: block;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eli-btn{
+  background-color: rgb(25, 139, 245);
+  border-radius: 20px;
+  width: 250px;
+  height: 40px;
+  border: none;
+  /* color: #0a0f4b; */
+  font-weight: 500;
+}
+.resize-image{
+  width: 70%;
+  /* padding-top: 5px; */
+  height: 140px;
+}
+
+/*---------------form pop-up------------*/
+/* .form-popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(119, 119, 119, 0.75); /* Dims background */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+} */
+
+/* .form-popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+} */
+
+/* .popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+} */ 

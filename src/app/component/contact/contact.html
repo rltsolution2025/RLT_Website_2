@@ -1,0 +1,44 @@
+<!-- 
+<div *ngIf="isVisible" class="form-popup-overlay">
+  <div class="form-popup-container">
+    <button class="close-button" (click)="closePopup()">&times;</button>
+
+    <form #popupForm="ngForm" (ngSubmit)="onSubmit(popupForm)" novalidate>
+      <h2 class="form-heading"><span>For Enquiry!</span></h2>
+
+      <input type="text" name="name" [(ngModel)]="user.name" placeholder="Your Name" required #name="ngModel" />
+      <div *ngIf="name.invalid && name.touched" class="error-text">Name is required</div>
+
+      <input type="email" name="email" [(ngModel)]="user.email" placeholder="Your Email" required #email="ngModel" />
+      <div *ngIf="email.invalid && email.touched" class="error-text">Valid email required</div>
+
+      <input type="tel" name="phone" [(ngModel)]="user.phone" placeholder="Phone Number" required #phone="ngModel" />
+      <div *ngIf="phone.invalid && phone.touched" class="error-text">Phone number required</div>
+
+      <input type="text" name="district" [(ngModel)]="user.district" placeholder="Your District" required #district="ngModel" />
+      <div *ngIf="district.invalid && district.touched" class="error-text">District required</div>
+
+      <select name="course" [(ngModel)]="user.course" required #course="ngModel">
+        <option value="">Select Course</option>
+        <option value="tnusrb-pc">TNUSRB PC</option>
+        <option value="tnusrb-si">TNUSRB SI</option>
+        <option value="army">Indian Army</option>
+        <option value="navy-airforce">Indian Navy / Air Force</option>
+      </select>
+      <div *ngIf="course.invalid && course.touched" class="error-text">Course selection required</div>
+
+      <div class="immediate-join">
+        <label>Immediate Joining:</label><br />
+        <label><input type="radio" name="join" value="yes" [(ngModel)]="user.join" required /> Yes</label>
+        <label><input type="radio" name="join" value="no" [(ngModel)]="user.join" required /> No</label>
+      </div>
+
+      <button type="submit" [disabled]="popupForm.invalid">Send Enquiry</button>
+    </form>
+
+    <div *ngIf="formSubmitted" style="color: green; margin-top: 10px;">
+      Thank you for your enquiry! <br />We will contact you soon.
+    </div>
+  </div>
+</div>
+ -->

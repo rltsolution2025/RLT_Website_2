@@ -7,8 +7,9 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { Api } from '../../services/api';
 
 @Component({
   selector: 'app-home-page',
@@ -17,22 +18,40 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./home-page.css'],
   imports: [
     CommonModule,
-    FormsModule,RouterLink
+    FormsModule,RouterLink,
   ]
 })
 export class HomePage implements AfterViewInit {
   @ViewChild('myCarousel') carouselElement!: ElementRef;
   @ViewChild('testimonialCarousel') testimonialCarousel!: ElementRef;
 
+  @ViewChild('enquiryFormSection') enquiryFormSection!: ElementRef;
+
+  scrollToForm() {
+    this.enquiryFormSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
   formSubmitted = false;
+isPopupOpen = false;
+
+openPopup() {
+  this.isPopupOpen = true;
+}
+
+closePopup() {
+  this.isPopupOpen = false;
+}
+
 
   user = {
     name: '',
     email: '',
-    phone: '',
+    number: '',
     district: '',
     course: '',
-    join: '',
+    specialization:'',
+    join: false
+    
   };
 
   testimonials = [
@@ -72,8 +91,76 @@ export class HomePage implements AfterViewInit {
       review: 'The instructors are experienced and supportive. Helped me crack TNUSRB PC exam.'
     }
   ];
+cards = [
+    {
+      image: '/police.png',
+      title: 'Police Coaching',
+      description: 'Expert training for Police exams including TNUSRB and RPF.',
+      link: '/register-form'
+    },
+    {
+      image: '/army.png',
+      title: 'Army Recruitment',
+      description: 'Join our Army coaching program to crack GD, Clerk, and Technical roles.',
+      link: '/register-form'
+    },
+    {
+      image: '/navy.png',
+      title: 'Navy Training',
+      description: 'Prepare for MR, SSR, AA exams with our Navy training program.',
+      link: '/register-form'
+    },
+    {
+      image: '/air-force.png',
+      title: 'Air Force X & Y',
+      description: 'Crack Group X and Y exams with our professional coaching.',
+      link: '/register-form'
+    },
+    {
+      image: '/nda.png',
+      title: 'NDA / CDS',
+      description: 'Crack UPSC NDA & CDS with our focused coaching modules.',
+      link: '/register-form'
+    },
+    {
+      image: '/capf.png',
+      title: 'Assistant Commandant',
+      description: 'Guidance for CAPF Assistant Commandant entrance exams.',
+      link: '/register-form'
+    },
+    {
+      image: '/crpf.png',
+      title: 'CRPF & BSF',
+      description: 'Expert training for Central Armed Police Forces like CRPF and BSF.',
+      link: '/register-form'
+    },
+    {
+      image: '/ssc.png',
+      title: 'SSC - GD & MTS',
+      description: 'Start your SSC journey with GD & MTS focused preparation.',
+      link: '/register-form'
+    },
+    {
+      image: '/physical.png',
+      title: 'Physical Training',
+      description: 'Get physically ready with our daily fitness training sessions.',
+      link: ''
+    },
+    {
+      image: '/online.png',
+      title: 'Online Classes',
+      description: 'Join our virtual classrooms for live coaching sessions.',
+      link: ''
+    },
+    {
+      image: '/mock.png',
+      title: 'Mock Exams',
+      description: 'Regular mock tests and assessments to track your progress.',
+      link: ''
+    }
+  ];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiServices:Api) {}
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -139,13 +226,40 @@ export class HomePage implements AfterViewInit {
       });
     }
   }
+  courseOptions: { [key: string]: string[] } = {
+    'TNUSRB': ['Police Constable', 'Sub Inspector', 'Sub Inspector-Finger Print', 'Sub Inspector-Technical','Watcher','Guard', 'Forester'],
+    'Army': ['NDA', 'CDS', 'General Duty', 'Tradesman','Nursing Assistant', 'Soldier-Clerk / Store Keeper Technical', 'Technical'],
+    'Navy': ['MR', 'Technical SSR', 'Technical AA' , ' Coast Gaurd', 'Coast Guard Navik (GD)', 'Coast Guard Navik (DB)'],
+    'Air Force': ['Indian Air Force Group X & Y', 'Indian Air Force Group X', 'Indian Air Force Group Y'],
+    'Other Uniformed Services': ['RPF-Sub Inspector', 'RPF-Police Constable', 'BSF-Tradesman', 'BSF-GD', 'CRPF-Constable (GD)', 'CRPF-Tradesman', 'SSC-MTS','SSC-GD'],
+  };
 
-  onSubmit() {
-    this.formSubmitted = true;
-    console.log('Form Data:', this.user);
-
-    setTimeout(() => {
-      this.formSubmitted = false;
-    }, 5000);
+  get specializations(): string[] {
+    return this.courseOptions[this.user.course] || [];
   }
+
+
+  onSubmit(form: any) {
+  if (form.invalid) {
+    console.warn('Form is invalid. Please correct the errors and try again.');
+    return;
+  }
+
+  const formData = { ...this.user }; // Or use form.value if all values are synced
+  console.log(formData);
+
+  this.apiServices.submitForm(formData).subscribe({
+    next: (res: any) => {
+      console.log('✅ Form submitted!', res);
+      this.formSubmitted = true;
+      form.resetForm(); // reset form after successful submission
+      setTimeout(()=>{this.formSubmitted = false},3000)
+    },
+    error: (err: any) => {
+      console.error('❌ Error submitting form:', err);
+    }
+  });
+}
+
+  
 }
