@@ -49,221 +49,106 @@
             </ul>
         </div>
     </div>
-    <div class="container my-4">
-        <button class="btn custom-button" (click)="showSyllabus = !showSyllabus">
-            {{ showSyllabus ? ' ▲ Syllabus for Army Nursing Assistant' : ' ▼ Syllabus for Army Nursing Assistant' }}
-        </button>
-
-        <div *ngIf="showSyllabus" class="mt-3 card card-body" style="white-space: pre-line; text-align: justify;">
-            <div class="row" style="margin-left: 20px;">
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <ol>
-                            <li style="font-weight: bold;">GENERAL KNOWLEDGE</li>
-                            <ul>
-                                <li>Abbreviations related to health and medicine</li>
-                                <li>Sports and Fitness in Armed Forces</li>
-                                <li>Awards and Honors (National and International)</li>
-                                <li>Indian Armed Forces and its Structure</li>
-                                <li>Important Days and Themes (Health, Army, International)</li>
-                                <li>Constitution of India – Basic Facts</li>
-                                <li>Current Affairs – National & International</li>
-                                <li>Prominent personalities in Defence and Medicine</li>
-                                <li>Books and Authors (General Awareness)</li>
-                                <li>International Organizations WHO, UN, Red Cross, etc.,</li>
-                                <li>Recent Scientific and Technological Developments</li>
-                            </ul>
-                        </ol>
-                    </div>
-                    <div class="col-md-6">
-                        <ol start="2">
-                            <li style="font-weight: bold;">BIOLOGY (Main Subject)</li>
-                            <ul>
-                                <li>Basic Biology and Classification of Life</li>
-                                <li>Life Processes – Nutrition, Respiration, Excretion, Reproduction</li>
-                                <li>Human Anatomy and Physiology (Structure and Function of Body Systems)</li>
-                                <li>Blood – Types, Functions, and Blood Grouping</li>
-                                <li>Digestive, Respiratory, Circulatory, Nervous, and Excretory Systems</li>
-                                <li>Immunity and Vaccination</li>
-                                <li>Common Human Diseases – Causes, Symptoms, and Prevention</li>
-                                <li>First Aid and Emergency Care</li>
-                                <li>Balanced Diet and Nutrition</li>
-                                <li>Microorganisms and Their Role in Health</li>
-                                <li>Ecological Balance and Conservation</li>
-                                <li>Cell – Structure and Functions</li>
-                                <li>Genetics and Heredity – Basics</li>
-                                <li>Human Health and Hygiene</li>
-                            </ul>
-                        </ol>
-                    </div>
-                </div>
-                <!-- Row 2: 3 4 -->
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <ol start="3">
-                            <li style="font-weight: bold;">CHEMISTRY</li>
-                            <ul>
-                                <li>Physical and Chemical Changes</li>
-                                <li>Properties of Air and Water</li>
-                                <li>Acids, Bases, and Salts – Characteristics and Uses</li>
-                                <li>Elements, Mixtures, and Compounds</li>
-                                <li>Important Chemical Reactions in the Body</li>
-                                <li>Carbon and its Compounds - Glucose, Urea, etc.,</li>
-                                <li>Structure of Atom – Basics</li>
-                                <li>Natural and Artificial Fertilizers</li>
-                                <li>Water Purification Techniques</li>
-                                <li>Drugs and Alcohol – Their Effects on the Human Body</li>
-                            </ul>
-                        </ol>
-                    </div>
-                    <div class="col-md-6">
-                        <ol start="4">
-                            <li style="font-weight: bold;">PHYSICS</li>
-                            <ul>
-                                <li>Matter – States and Physical Properties</li>
-                                <li>Measurement of Physical Quantities (Mass, Volume, Density)</li>
-                                <li>Pressure and Its Applications in the Human Body (e.g., Blood Pressure)</li>
-                                <li>Heat – Effects and Measurement</li>
-                                <li>Light – Reflection, Refraction, Lenses (used in Medical Instruments)</li>
-                                <li>Sound – Properties and Uses in Medicine (e.g., Ultrasound)</li>
-                                <li>Electricity – Basic Concepts, Circuits, and Safety</li>
-                                <li>Magnetism – Basic Principles</li>
-                                <li>Force, Work, Power, and Energy</li>
-                                <li>Motion – Speed, Velocity, and Acceleration</li>
-                            </ul>
-                        </ol>
-                    </div>
-                </div>
-
-
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <ol start="5">
-                            <li style="font-weight: bold;">MATHEMATICS (Basic & Applied)</li>
-                            <ul>
-                                <li>Number Systems</li>
-                                <li>Simplification and Approximation</li>
-                                <li>Ratio and Proportion</li>
-                                <li>Percentage</li>
-                                <li>Profit and Loss</li>
-                                <li>Simple and Compound Interest</li>
-                                <li>Time, Speed, and Distance</li>
-                                <li>Time and Work</li>
-                                <li>Mensuration – Area and Volume (Medical Dosage Calculation Context)</li>
-                                <li>Algebra – Basic Concepts</li>
-                                <li>Data Interpretation (Tables, Graphs, Charts)</li>
-                            </ul>
-                        </ol>
-                    </div>
-                    <div class="syllabus-link d-flex align-items-center gap-2 my-3">
-                        <img src="animated-click-here-.gif" alt="Click here" class="click-icon" />
-                        <span>
-                            <a href="#" target="_blank" class="pdf-link">Army Nursing Assistant Syllabus (PDF) in English</a>
-                        </span>
-                    </div>
-                </div>
+    <div class="container">
+        <div class="syllabus-button d-flex flex-wrap gap-2 my-3">
+            <a class="btn custom-syllabus" href="#" target="_blank" download>
+                📄 Syllabus (PDF) - English
+            </a>
+        </div>
+    </div>
+    <div class="partion">
+        <div class="tnusrb-police-constable-content-1">
+            <div class="tnusrb-police-constable-heading-1">
+                Physical Efficiency Test
+            </div>
+            <table class="table table-bordered table-hover custom-table">
+                <thead class="theader">
+                    <tr>
+                        <th scope="col" colspan="2">Physical Test</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="col">1600 Meters Race</td>
+                        <td>5 min 45 seconds</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Ditch Jump</td>
+                        <td>9 feet</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Pull ups</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Zig Zag Balance</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-2">
+                <span class="content">
+                    <ul>
+                        <li><Strong>Note:</Strong> Eligibility Only No Marks</li>
+                    </ul>
+                </span>
             </div>
         </div>
-            <div class="container">
-                <div class="syllabus-button d-flex flex-wrap gap-2 my-3">
-                    <a class="btn custom-syllabus" href="#" target="_blank" download>
-                        📄 Syllabus (PDF) - English
-                    </a>
-                </div>
+        <div class="tnusrb-police-constable-content-1">
+            <div class="tnusrb-police-constable-heading-1">
+                Written Examination Pattern
             </div>
-            <div class="partion">
-                <div class="tnusrb-police-constable-content-1">
-                    <div class="tnusrb-police-constable-heading-1">
-                        Physical Efficiency Test
-                    </div>
-                    <table class="table table-bordered table-hover custom-table">
-                        <thead class="theader">
-                            <tr>
-                                <th scope="col" colspan="2">Physical Test</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="col">16000 Meters Race</td>
-                                <td>5 min 45 seconds</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">Ditch Jump</td>
-                                <td>9 feet</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">Pull ups</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td scope="col">Zig Zag Balance</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="mt-2">
-                        <span class="content">
-                            <ul>
-                                <li><Strong>Note:</Strong> Eligibility Only No Marks</li>
-                            </ul>
-                        </span>
-                    </div>
-                </div>
-                <div class="tnusrb-police-constable-content-1">
-                    <div class="tnusrb-police-constable-heading-1">
-                        Written Examination Pattern
-                    </div>
-                    <table class="table table-bordered table-hover custom-table">
-                        <thead class="theader">
-                            <tr>
-                                <th scope="col">Subject</th>
-                                <th scope="col">Questions</th>
-                                <th>Mark</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="col">General Knowledge (G.K)</td>
-                                <td>10</td>
-                                <td>40</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">Mathematics</td>
-                                <td>5</td>
-                                <td>20</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">Physics</td>
-                                <td>5</td>
-                                <td>20</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">Biology</td>
-                                <td>15</td>
-                                <td>60</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">Chemistry</td>
-                                <td>15</td>
-                                <td>60</td>
-                            </tr>
-                            <tr>
-                                <td scope="col" style="font-weight: bold;">Total</td>
-                                <td>50</td>
-                                <td>200</td>
-                            </tr>
-                            <tr>
-                                <td scope="col" style="font-weight: bold;">Qualifying Marks</td>
-                                <td>-</td>
-                                <td>80</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="mt-2">
-                        <ul>
-                            <li><strong>Note: </strong>Negative Mark 1 for each wrong answer</li>
-                            <li><strong>Duration: </strong>60 Mins</li>
-                        </ul>
-                    </div>
-                </div>
+            <table class="table table-bordered table-hover custom-table">
+                <thead class="theader">
+                    <tr>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Questions</th>
+                        <th>Mark</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="col">General Knowledge (G.K)</td>
+                        <td>10</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Mathematics</td>
+                        <td>5</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Physics</td>
+                        <td>5</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Biology</td>
+                        <td>15</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Chemistry</td>
+                        <td>15</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" style="font-weight: bold;">Total</td>
+                        <td>50</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" style="font-weight: bold;">Qualifying Marks</td>
+                        <td>-</td>
+                        <td>80</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-2">
+                <ul>
+                    <li><strong>Note: </strong>Negative Mark 1 for each wrong answer</li>
+                    <li><strong>Duration: </strong>60 Mins</li>
+                </ul>
             </div>
+        </div>
+    </div>
