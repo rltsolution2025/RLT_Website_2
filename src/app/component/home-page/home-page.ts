@@ -5,11 +5,13 @@ import {
   ElementRef,
   Inject,
   PLATFORM_ID,
+  
 } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Api } from '../../services/api';
+
 
 @Component({
   selector: 'app-home-page',
@@ -26,6 +28,9 @@ export class HomePage implements AfterViewInit {
   @ViewChild('testimonialCarousel') testimonialCarousel!: ElementRef;
 
   @ViewChild('enquiryFormSection') enquiryFormSection!: ElementRef;
+  router: any;
+
+  
 
   scrollToForm() {
     this.enquiryFormSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
@@ -242,6 +247,7 @@ cards = [
   onSubmit(form: any) {
   if (form.invalid) {
     console.warn('Form is invalid. Please correct the errors and try again.');
+    this.router.navigate(['/thank-you']);
     return;
   }
 

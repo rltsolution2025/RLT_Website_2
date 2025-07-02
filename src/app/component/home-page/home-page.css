@@ -59,8 +59,8 @@
   font-size: 20px;
 }
 .muppadi-text {
-  background-color: rgb(5, 5, 139);
-  color: white;
+  /* background-color: rgb(5, 5, 139); */
+  /* color: white; */
   padding: 5px 10px;
   display: inline-block;
   margin-top: 5px;
@@ -459,7 +459,7 @@
 .eli-btn{
   background-color: rgb(25, 139, 245);
   border-radius: 20px;
-  width: 250px;
+  width: auto;
   height: 40px;
   border: none;
   /* color: #0a0f4b; */

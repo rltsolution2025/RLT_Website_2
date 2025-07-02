@@ -2,7 +2,7 @@
   <!-- scrolling-notification.component.html -->
 <div class="notification-wrapper">
   <div class="scrolling-text">
-    🚨 Admission Open! Join RLT TriForce Academy Today! Limited seats available!  <span class="blink-highlight">Enroll Now !!!</span>
+    🚨 Admission Open! Join RLT TriForce Academy Today! Limited seats available!  <span class="blink-highlight" (click)="scrollToForm()">Enroll Now !!!</span>
   </div>
 </div>
 
@@ -60,8 +60,7 @@
   <div class="head">
     <p class="title">
       <span class="welcome" style="font-style: italic;">Welcome To!<br></span>
-      <span class="muppadi-text">RLT Tri Force </span>
-      <span class="academy-text">Academy</span>
+      RLT Tri Force Academy
       
     </p>
   </div>
@@ -155,7 +154,7 @@
           Please select if you can join immediately.
         </div>
 
-        <button type="submit" [disabled]="form.invalid">Send Enquiry</button>
+        <button type="submit" [disabled]="form.invalid" routerLink="/thank-you">Send Enquiry</button>
       </form>
 
       <div *ngIf="formSubmitted" style="color: green; margin-top: 10px;">
@@ -296,5 +295,5 @@
     </span>
   </div>
   <div class="contact-button">
-    <button routerLink="/contact">Join Now !</button>
+    <button (click)="scrollToForm()">Join Now !</button>
   </div>

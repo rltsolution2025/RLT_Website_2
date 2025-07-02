@@ -195,3 +195,14 @@ color:#1A237E ;
     padding-left: 0;
   }
 }
+/*language drop down*/
+/* Hide top banner */
+#custom_translate_btn {
+  background-color: #f1f1f1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+#custom_translate_btn:hover {
+  background-color: #ddd;
+}

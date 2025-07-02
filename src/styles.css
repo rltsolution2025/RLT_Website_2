@@ -1,3 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+/* Hide Google Translate top bar */
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Remove margin/padding added to body when banner is shown */
+body {
+  top: 0px !important;
+}
+
+/* Hide the mini toolbar in the top-right */
+.goog-logo-link,
+.goog-te-gadget,
+#goog-gt-tt {
+  display: none !important;
+}
+
+/* Optional: Hide iframe itself */
+iframe.goog-te-banner-frame {
+  display: none !important;
+}
+

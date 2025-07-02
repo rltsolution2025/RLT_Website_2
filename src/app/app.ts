@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { Footer } from './footer/footer';
 
+declare const translateLang: any;
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,7 @@ import { Footer } from './footer/footer';
 })
 export class App {
   protected title = 'Police-training';
+   changeLanguage(lang: string) {
+    translateLang(lang);
+  }
 }
