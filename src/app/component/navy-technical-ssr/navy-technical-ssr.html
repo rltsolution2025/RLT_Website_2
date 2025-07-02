@@ -52,250 +52,89 @@
             </ul>
         </div>
     </div>
-    <div class="container my-4">
+    <div class="container">
+        <div class="syllabus-button d-flex flex-wrap gap-2 my-3">
+            <a class="btn custom-syllabus" href="#" target="_blank" download>
+                📄 Syllabus (PDF) - English
+            </a>
+        </div>
+    </div>
+    <div class="partion">
+        <div class="tnusrb-police-constable-content-1">
+            <div class="tnusrb-police-constable-heading-1">
+                Physical Efficiency Test
+            </div>
+            <table class="table table-bordered table-hover custom-table">
+                <thead class="theader">
+                    <tr>
+                        <th colspan="2">Physical Test</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="col">1600 Meters Race</td>
+                        <td>7 min</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Squats</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Pull ups</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <button class="btn custom-button" (click)="showSyllabus = !showSyllabus">
-            {{ showSyllabus ? ' ▲ Syllabus for Navy ( Technical SSR )' : ' ▼ Syllabus for Navy ( Technical SSR )' }}
-        </button>
-
-        <div *ngIf="showSyllabus" class="mt-3 card card-body" style="white-space: pre-line; text-align: justify;">
-            <div
-                style="font-size: 25px; text-align: center; font-weight: bold;margin-bottom: 40px;color: rgb(40, 40, 129);">
-                Indian Navy ( Technical SSR ) Syllabus</div>
-            <div class="row" style="margin-left: 20px;">
-                <div class="row mb-4">
-                    <strong class="main-title">Section 1: Science (Physics, Chemistry, Biology & Computer
-                        Basics)</strong>
-                    <div class="col-md-6">
-                        <ol>
-                            <li style="font-weight: bold;">Physics:</li>
-                            <ul>
-                                <li>Physical World and Measurement</li>
-                                <li>Kinematics, Laws of Motion</li>
-                                <li>Work, Energy, and Power</li>
-                                <li>Motion of System of Particles and Rigid Body</li>
-                                <li>Gravitation</li>
-                                <li>Mechanics of Solids and Fluids</li>
-                                <li>Heat and Thermodynamics</li>
-                                <li>Oscillations and Waves</li>
-                                <li>Current Electricity</li>
-                                <li>Magnetic Effect of Current and Magnetism</li>
-                                <li>Electromagnetic Induction and Alternating Current</li>
-                                <li>Electromagnetic Waves</li>
-                                <li>Optics</li>
-                                <li>Dual Nature of Matter and Radiation</li>
-                                <li>Atoms and Nuclei</li>
-                                <li>Semiconductors and Electronics</li>
-                                <li>Communication Systems</li>
-                            </ul>
-                        </ol>
-                    </div>
-                    <div class="col-md-6">
-                        <ol start="2">
-                            <li style="font-weight: bold;margin-left: 40px;">Chemistry:</li>
-                            <ul style="margin-left: 40px;">
-                                <li>Metals and Non-Metals</li>
-                                <li>Organic and Inorganic Chemistry Basics</li>
-                                <li>Atomic Structure</li>
-                                <li>Acids, Bases, Salts</li>
-                                <li>Chemical Reactions and Equations</li>
-                                <li>Periodic Table</li>
-                                <li>Environmental Chemistry</li>
-                                <li>Carbon and Its Compounds</li>
-                                <li>Carbon and Its Compounds</li>
-                            </ul>
-                        </ol>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <ol start="3">
-                            <li style="font-weight: bold;">Biology:</li>
-                            <ul>
-                                <li>Food, Nutrition, and Health</li>
-                                <li>Human Physiology</li>
-                                <li>Diseases and Prevention</li>
-                                <li>Life Processes (Digestion, Respiration, Circulation)</li>
-                                <li>Cell Structure and Function</li>
-                            </ul>
-                        </ol>
-                    </div>
-                    <div class="col-md-6">
-                        <ol start="4">
-                            <li style="font-weight: bold;">Computer Science (Basics):</li>
-                            <ul>
-                                <li>Introduction to Computers</li>
-                                <li>Components of Computer System</li>
-                                <li>Operating System Basics</li>
-                                <li>MS Office Tools</li>
-                                <li>Basics of Internet</li>
-                                <li>Cyber Security Awareness</li>
-                            </ul>
-                        </ol>
-                    </div>
-                </div>
-                <!-- Row 2: 3 4 -->
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <strong class="main-title">Section 2: Mathematics</strong>
-                        <ol>
-                            <ul>
-                                <li>Relations and Functions</li>
-                                <li>Sets and Set Theory</li>
-                                <li>Trigonometry</li>
-                                <li>Algebra: Complex Numbers, Quadratic Equations</li>
-                                <li>Sequences and Series</li>
-                                <li>Logarithms</li>
-                                <li>Coordinate Geometry: Straight Lines, Circles, Conic Sections</li>
-                                <li>Matrices and Determinants</li>
-                                <li>Vectors and 3D Geometry</li>
-                                <li>Limits, Continuity, and Differentiation</li>
-                                <li>Applications of Derivatives</li>
-                                <li>Integration (Indefinite and Definite)</li>
-                                <li>Probability and Statistics</li>
-                                <li>Permutation and Combination</li>
-                                <li>Binomial Theorem</li>
-                                <li>Exponential and Logarithmic Series</li>
-                            </ul>
-                        </ol>
-                    </div>
-                    <div class="col-md-6">
-                        <strong class="main-title">Section 3: English</strong>
-                        <ol>
-                            <ul style="margin-left: 40px;">
-                                <li>Comprehension Passage</li>
-                                <li>Prepositions and Conjunctions</li>
-                                <li>Sentence Correction</li>
-                                <li>Active and Passive Voice</li>
-                                <li>Direct and Indirect Speech</li>
-                                <li>Tenses and Verbs</li>
-                                <li>Antonyms and Synonyms</li>
-                                <li>Vocabulary and Word Meanings</li>
-                                <li>Idioms and Phrases</li>
-                                <li>Spotting Errors</li>
-                                <li>Fill in the Blanks</li>
-                                <li>Use of Modals, Determiners, and Articles</li>
-                            </ul>
-                        </ol>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <strong class="main-title">Section 2: GENERAL AWARENESS</strong>
-                        <ol>
-                            <ul>
-                                <li>Indian History, Culture, and Heritage</li>
-                                <li>Geography of India and World</li>
-                                <li>Indian Constitution</li>
-                                <li>Important Days & Dates</li>
-                                <li>Awards and Honors</li>
-                                <li>Sports (Championships, Winners, Terms)</li>
-                                <li>Books and Authors</li>
-                                <li>Indian Armed Forces</li>
-                                <li>Freedom Movement</li>
-                                <li>National Symbols and Monuments</li>
-                                <li>Capitals & Currencies</li>
-                                <li>Inventions and Discoveries</li>
-                                <li>Current Affairs (National & International)</li>
-                                <li>Government Schemes</li>
-                                <li>Reasoning and Mental Ability</li>
-                            </ul>
-                        </ol>
-                    </div>
-                </div>
-                <div class="syllabus-link d-flex align-items-center gap-2 my-3">
-                    <img src="animated-click-here-.gif" alt="Click here" class="click-icon" />
-                    <span>
-                        <a href="#" target="_blank" class="pdf-link">Navy Senior Secondary Recruit (SSR)
-                            Syllabus
-                            (PDF) in English</a>
-                    </span>
-                </div>
+            <div class="mt-2">
+                <span class="content"><strong>Note: </strong>Eligibility only no marks</span>
             </div>
         </div>
-        <div class="container">
-            <div class="syllabus-button d-flex flex-wrap gap-2 my-3">
-                <a class="btn custom-syllabus" href="#" target="_blank" download>
-                    📄 Syllabus (PDF) - English
-                </a>
+        <div class="tnusrb-police-constable-content-1">
+            <div class="tnusrb-police-constable-heading-1">
+                Written Examination Pattern
+            </div>
+            <table class="table table-bordered table-hover custom-table">
+                <thead class="theader">
+                    <tr>
+                        <th scope="col">Subject</th>
+                        <th>Questions</th>
+                        <th>Total Mark</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="col">Science</td>
+                        <td>25</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">Mathematics</td>
+                        <td>25</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">English</td>
+                        <td>25</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">General Awareness</td>
+                        <td>25</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" style="font-weight: bold;">Total</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-2">
+                <ul>
+                    <li><strong>Note: </strong>Negative Mark 0.25 for each wrong answer</li>
+                    <li><strong>Duration: </strong>30 Mins</li>
+                </ul>
             </div>
         </div>
-        <div class="partion">
-            <div class="tnusrb-police-constable-content-1">
-                <div class="tnusrb-police-constable-heading-1">
-                    Physical Efficiency Test
-                </div>
-                <table class="table table-bordered table-hover custom-table">
-                    <thead class="theader">
-                        <tr>
-                            <th colspan="2">Physical Test</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="col">16000 Meters Race</td>
-                            <td>7 min</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Squats</td>
-                            <td>20</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Pull ups</td>
-                            <td>10</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="mt-2">
-                    <span class="content"><strong>Note: </strong>Eligibility only no marks</span>
-                </div>
-            </div>
-            <div class="tnusrb-police-constable-content-1">
-                <div class="tnusrb-police-constable-heading-1">
-                    Written Examination Pattern
-                </div>
-                <table class="table table-bordered table-hover custom-table">
-                    <thead class="theader">
-                        <tr>
-                            <th scope="col">Subject</th>
-                            <th>Questions</th>
-                            <th>Total Mark</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="col">Science</td>
-                            <td>25</td>
-                            <td>25</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Mathematics</td>
-                            <td>25</td>
-                            <td>25</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">English</td>
-                            <td>25</td>
-                            <td>25</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">General Awareness</td>
-                            <td>25</td>
-                            <td>25</td>
-                        </tr>
-                        <tr>
-                            <td scope="col" style="font-weight: bold;">Total</td>
-                            <td>100</td>
-                            <td>100</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="mt-2">
-                    <ul>
-                        <li><strong>Note: </strong>Negative Mark 0.25 for each wrong answer</li>
-                        <li><strong>Duration: </strong>30 Mins</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    </div>
