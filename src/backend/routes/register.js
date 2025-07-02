@@ -5,9 +5,10 @@ const User = require('../models/User');
 
 
 router.post('/register', async (req, res) => {
+  console.log(req.body);
   try {
-    const { name, email, number, district, course, immediateJoiner } = req.body;
-    const user = new User({ name, email, number, district, course, immediateJoiner });
+    const { name, email, number, district, course,specialization, join } = req.body;
+    const user = new User({ name, email, number, district, course, specialization,join});
     await user.save();
     console.log(user);
     res.status(201).json({ message: 'User registered successfully' });
@@ -15,7 +16,7 @@ router.post('/register', async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Something went wrong' });
-  }
+  } 
 });
 
 module.exports = router;

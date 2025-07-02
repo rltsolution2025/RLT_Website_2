@@ -18,7 +18,7 @@
 
 <!-- Filtered Card Section -->
 <div class="container my-4">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
     <div class="col" *ngFor="let item of filteredCourses()">
       <div class="card h-100 shadow-sm">
         <h5 class="card-title">{{ item.title }}</h5>
@@ -26,17 +26,49 @@
         <div class="card-body">
           <h5 style="color: rgb(16, 58, 148); font-weight: 700;"  class="card-subtitle">{{ item.designation }}</h5><br>
           <p class="card-text" ><strong >Education:</strong> {{ item.Education }}</p>
-          <p class="card-text"><strong>Age:</strong> </p>
-          <ul class="mb-2" style="list-style-type:disc; padding-left: 3rem; font-size: 14px;">
-               <li ><strong >General:</strong> {{ item.Age.category.general }}</li>
-               <li><strong>BC/MBC:</strong> {{ item.Age.category.bc_mbc }}</li>
-               <li><strong>SC/ST:</strong> {{ item.Age.category.sc_st }}</li>
-               <li><strong>Transgender:</strong> {{ item.Age.category.Transgender }}</li>
-               <li><strong>Widows:</strong> {{ item.Age.category.Widows }}</li>
-               <li><strong>Ex-Servicemen:</strong> {{ item.Age.category.ex_service_man }}</li>
-           </ul>
           <p class="card-text"><strong>Recruitment:</strong> {{ item.Recruitment }}</p>
-          <a [routerLink]="item.link" class="btn btn-primary">Learn More</a>
+           <table class="table table-bordered" style="font-size: 14px; width: 100%;">
+  <thead >
+    <tr >
+      <th style="text-align: center; vertical-align: middle;">Category</th>
+<th style="text-align: center; ">
+  Age Limit<br>
+  <span style="font-weight: normal;">(Yrs)</span>
+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>General</strong></td>
+      <td>{{ item.Age.category.general }}</td>
+    </tr>
+    <tr>
+      <td><strong>BC/MBC</strong></td>
+      <td>{{ item.Age.category.bc_mbc }}</td>
+    </tr>
+    <tr>
+      <td><strong>SC/ST</strong></td>
+      <td>{{ item.Age.category.sc_st }}</td>
+    </tr>
+    <tr>
+      <td><strong>Transgender</strong></td>
+      <td>{{ item.Age.category.Transgender }}</td>
+    </tr>
+    <tr>
+      <td><strong>Widow</strong></td>
+      <td>{{ item.Age.category.Widow }}</td>
+    </tr>
+    <tr>
+      <td><strong>Ex-Servicemen</strong></td>
+      <td>{{ item.Age.category.ex_service_man }}</td>
+    </tr>
+    <tr>
+      <td><strong>Departmental Candidate</strong></td>
+      <td>{{ item.Age.category.Departmental_candidate }}</td>
+    </tr>
+  </tbody>
+</table>
+  <a [routerLink]="item.link" class="btn btn-primary">Learn More</a>
         </div>
       </div>
     </div>
