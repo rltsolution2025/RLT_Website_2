@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class Api {
   private baseUrl = 'https://rlt-website-2.onrender.com';
+  // private baseUrl = 'http://localhost:3000'; // Use your local server URL
 
   constructor(private http:HttpClient) { }
 
@@ -14,4 +15,5 @@ export class Api {
     return this.http.post(`${this.baseUrl}/api/register`, data);
   
   }
+  
 }

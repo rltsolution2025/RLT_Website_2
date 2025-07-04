@@ -156,7 +156,10 @@
           Please select if you can join immediately.
         </div>
 
-        <button type="submit" [disabled]="form.invalid" routerLink="/thank-you">Send Enquiry</button>
+        <!-- <button type="submit" [disabled]="form.invalid" routerLink="/thank-you">Send Enquiry</button> -->
+         <button type="submit" [disabled]="form.invalid">Send Enquiry</button>
+
+
       </form>
 
       <div *ngIf="formSubmitted" style="color: green; margin-top: 10px;">
