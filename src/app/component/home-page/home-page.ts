@@ -254,12 +254,11 @@ cards = [
       this.formSubmitted = true;
       form.resetForm(); // reset form after successful submission
       setTimeout(()=>{this.formSubmitted = false},3000)
+      console.log(formData);
     },
     error: (err: any) => {
       console.error('❌ Error submitting form:', err);
     }
   });
 }
-
-  
 }

@@ -6,12 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Api {
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = 'https://rlt-website-2.onrender.com';
 
   constructor(private http:HttpClient) { }
 
   submitForm(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/register`, data);
-  
   }
 }
