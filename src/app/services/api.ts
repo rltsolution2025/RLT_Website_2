@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Api {
-  private baseUrl = 'https://rlt-website-2.onrender.com';
+  private baseUrl = 'https://rlt-website-2.onrender.com/api';
   // private baseUrl = 'http://localhost:3000'; // Use your local server URL
 
   constructor(private http:HttpClient) { }

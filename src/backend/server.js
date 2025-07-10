@@ -6,7 +6,12 @@ const register=require('./routes/register')
 const app = express();
 const PORT = 3000;
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: '*', // or use '*' to allow all (not recommended in production)
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
 app.use(express.json());
 
 // MongoDB connection
