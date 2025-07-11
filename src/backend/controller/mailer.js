@@ -48,7 +48,7 @@ async function sendUserEmail(userData) {
       <p>Thanks for registering for the ${course} training program.</p>
       <p>We will contact you shortly with more details.</p>
       <br />
-      <p>Best regards,<br />Team RLT Tri Force Academy </p><br /> <p>Phone: +91 9479 999 999</p>
+      <p>Best regards,<br />RLT Tri Force Academy </p><br /> <p>Phone: +91 9479 999 999</p>
     `
   });
 }
