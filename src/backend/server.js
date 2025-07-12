@@ -10,18 +10,20 @@ const PORT = 3000;
 
 // app.use(cors());
 app.use(cors({
-  origin: '*', // or use '*' to allow all (not recommended in production)
+  origin: 'http://localhost:4200', // or use '*' to allow all (not recommended in production)
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
+
+
 app.use(express.json());
 
 // MongoDB connection
 connectDB();
+
 // POST route to save user data
 app.use('/api', register);
 
-// app.use('/api/enquiry', enquiry); // Adjusted to match the route in the Angular service
 
 app.get('/', (req, res) => {
   res.send('Welcome to RLT Academy API'); 

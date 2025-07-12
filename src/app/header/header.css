@@ -2,6 +2,7 @@
   /* background-color: rgb(5, 5, 139); */
   box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
   background: linear-gradient(to bottom, #4facfe, #0026fe);
+  flex-direction: column;
 }
 
 .nav-link {
@@ -10,9 +11,7 @@
   font-weight: bold;
   padding-right: 100px;
 }
-
 .nav-link:hover {
-  /* color: rgb(175, 41, 41); */
   color:#1A237E;
 }
 
@@ -20,7 +19,6 @@
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 10px;
-  /* Optional: Adjust spacing */
 }
 
 /* Optional: for smooth hover */
@@ -41,29 +39,21 @@
 
 /* Style the dropdown menu container */
 .dropdown-menu {
-  /* background-color: #d8bdbd; */
   background-color: whitesmoke;
-  /* Change menu background */
-  /* border: 1px solid #0d6efd; */
-  /* Optional: blue border */
   border-radius: 8px;
-  /* Rounded corners */
   padding: 10px;
   box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
-  /* Add shadow */
   margin-top: 10px;
 }
 
 /* Style each item inside dropdown */
 .dropdown-item {
   color: #0d6efd;
-  /* color: white; */
-  /* Blue text */
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 4px;
-  /* Optional: round edges on hover */
 }
+
 .other-item{
   color:white;
   font-size: medium;
@@ -79,7 +69,6 @@ color:#1A237E ;
 .dropdown-item:hover {
   background-color: #ffffff;
   color:#1A237E;
-  /* Text on hover */
 }
 
 .dropdown-menu {
@@ -105,9 +94,7 @@ color:#1A237E ;
 
 .active-dropdown {
   background-color: #0d6efd;
-  /* Blue background */
   color: white;
-  /* White text */
   font-weight: bold;
   border-radius: 4px;
 }
@@ -115,7 +102,6 @@ color:#1A237E ;
 .navbar-nav .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
-  /* Optional spacing adjustment */
 }
 
 .navbar-nav .dropdown-toggle::after {
@@ -265,7 +251,7 @@ position: fixed;
     display: none !important;
   }
 }
-.close-btn {
+.navbar-toggler .close-btn {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -273,10 +259,15 @@ position: fixed;
   border: none;
   background: none;
 }
+.dropdown-toggle{
+   list-style: none;
+}
 
 .dropdown-menu.show {
   display: block;
+
 }
+
 
 .mobile-menu-overlay {
   position: fixed;
@@ -315,3 +306,4 @@ position: fixed;
   border: none;
   background: transparent;
 }
+
