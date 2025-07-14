@@ -28,7 +28,7 @@ export class HomePage implements AfterViewInit {
   @ViewChild('testimonialCarousel') testimonialCarousel!: ElementRef;
 
   @ViewChild('enquiryFormSection') enquiryFormSection!: ElementRef;
-  router: any;
+
 
   scrollToForm() {
     this.enquiryFormSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
@@ -163,7 +163,7 @@ cards = [
     }
   ];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiServices:Api) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiServices:Api,private router: Router) {}
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
