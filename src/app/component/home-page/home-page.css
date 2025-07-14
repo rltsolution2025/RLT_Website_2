@@ -16,6 +16,13 @@
   border: none;
   outline: none;
 }
+@media ( max-width :480px ){
+ .carousel-inner,.custom-carousel, .carousel-item img {
+height : 50vh;
+  }
+  
+}
+
 .card-img-top {
   height: 200px;
   object-fit: cover;
@@ -59,8 +66,8 @@
   font-size: 20px;
 }
 .muppadi-text {
-  background-color: rgb(5, 5, 139);
-  color: white;
+  /* background-color: rgb(5, 5, 139); */
+  /* color: white; */
   padding: 5px 10px;
   display: inline-block;
   margin-top: 5px;
@@ -91,6 +98,23 @@
   line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 1rem;
+    width: auto;
+  }
+
+  .main-container .content,
+  .main-container .form {
+    width: 100%;
+  }
+
+  .main-container .form {
+    margin-top: 2rem;
+  }
+}
+
 .bottom-content-text {
   display: block;
   text-align: center;
@@ -112,6 +136,7 @@
   background: #c1dcf7;
   padding: 20px;
   border-radius: 10px;
+  width: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -164,7 +189,14 @@
   transition: background-color 0.3s ease;
   font-weight: bold;
 }
-
+.tri-force{
+  background-color: #030357;
+  padding: 4px;
+  color: #f8f9fa;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .form button:hover {
   background-color: #030357;
 }
@@ -361,6 +393,7 @@
 .carousel-inner {
   transition: height 0.3s ease;
 }
+
 .join-us-today {
   background-color: rgb(3, 51, 116);
   padding: 10px 10px;
@@ -456,15 +489,46 @@
   justify-content: center;
   align-items: center;
 }
-.eli-btn{
+.eli-btn {
   background-color: rgb(25, 139, 245);
-  border-radius: 20px;
-  width: 250px;
+  color: white;
+  border-radius: 999px; /* fully rounded pill */
   height: 40px;
   border: none;
-  /* color: #0a0f4b; */
-  font-weight: 500;
+  font-weight: bold;
+  padding: 0 20px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  outline: none;
 }
+
+.eli-btn:hover {
+  background-color: rgb(4, 19, 105);
+  color: #f1f1f1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.eli-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.eli-btn:focus {
+  outline: 3px solid rgba(25, 139, 245, 0.4);
+  outline-offset: 2px;
+}
+
 .resize-image{
   width: 70%;
   /* padding-top: 5px; */

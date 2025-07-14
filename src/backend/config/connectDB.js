@@ -1,11 +1,9 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb+srv://socialrltdigital:947yhRqQVrTd4VLr@rlt-tri-force.kdcchsc.mongodb.net/?retryWrites=true&w=majority&appName=RLT-TRI', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(process.env.MONGO_URI);
     console.log('MongoDB connected');
   } catch (err) {
     console.error('MongoDB connection failed:', err.message);
@@ -14,3 +12,5 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
+
+

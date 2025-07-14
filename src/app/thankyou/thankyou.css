@@ -1,0 +1,13 @@
+.thank-you-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.thank-you-container h1 {
+  color: rgb(0, 60, 128);
+  font-size: 2.5rem;
+}
+
+.btn {
+  margin-top: 20px;
+}

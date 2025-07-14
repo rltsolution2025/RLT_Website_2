@@ -36,6 +36,7 @@ import { TnusrbGuard } from './component/tnusrb-guard/tnusrb-guard';
 import { Contact } from './component/contact/contact';
 import { Eligibity } from './component/eligibity/eligibity';
 import { RegisterForm } from './component/register-form/register-form';
+import { Thankyou } from './thankyou/thankyou';
 
 
 export const routes: Routes = [
@@ -76,5 +77,6 @@ export const routes: Routes = [
     {path:'contact',component:Contact},
     {path:'eligible', component:Eligibity},
     {path:'register-form',component:RegisterForm},
+    {path:"thank-you", component:Thankyou},
     {path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
