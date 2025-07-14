@@ -29,10 +29,11 @@
    padding-right: 100px;
  }
 
- .nav-link:hover {
-   /* color: rgb(175, 41, 41); */
-   color: #1A237E;
- }
+.nav-item {
+  padding-right: 20px;
+  list-style-type: none;
+  
+}
 
 /* Style the dropdown menu container */
 .dropdown-menu {

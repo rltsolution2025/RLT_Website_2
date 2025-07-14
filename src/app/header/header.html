@@ -1,21 +1,13 @@
 <!-- Container -->
-<div class="d-flex justify-content-between custom-bg align-items-center px-3 py-1 bg-white text-navy">
-
-  <!-- Email -->
-   <div class="d-flex flex-column flex-sm-row align-items-center">
-    <div>
+<div class="d-flex justify-content-between  ">
   <small>
     <i class="fa-solid fa-envelope"></i>
     Email:
     <a href="mailto:info@rlttriforce.com" class="text-navy text-decoration-none">
       info&#64;rlttriforce.com
     </a>
-    <p>Phone: +91 89255 00513</p>
   </small>
-  </div>
-
-  <!-- Language Selector -->
-  <select (change)="onLanguageChange($event)" class="mt-2 mt-md-0" style="margin: 0 10px;">
+   <select (change)="onLanguageChange($event)" class="mt-2 mt-md-0" style="margin: 0 10px;">
     <option value="">🌐 Lan</option>
     <option value="en">English</option>
     <option value="ta">தமிழ்</option>
@@ -24,11 +16,13 @@
     <option value="te">తెలుగు</option>
     <option value="kn">ಕನ್ನಡ</option>
   </select>
-</div>
+    <p>Phone: +91 89255 00513</p>
+  </div>
 
+<div class="d-flex justify-content-between custom-bg align-items-center px-3 py-1 bg-white text-navy">
     <div class="d-flex justify-content-between align-items-center w-100 flex-wrap flex-md-nowrap">
       <div>
-      <div class="logo-row d-flex align-items-center">
+      <div class="logo-row d-flex  align-items-center">
         <a class="logo-container d-flex align-items-center text-decoration-none" routerLink="/home">
           <img src="RLT-Logo.png" alt="RLT Logo" class="rlt-police-academy me-2" />
           <div class="logo-text">
@@ -44,7 +38,7 @@
         </button>
       </div>
 
-       <div class="collapse navbar-collapse dropdowns d-none d-md-flex align-items-center gap-3" id="navbarNavDropdown">
+       <div class="collapse navbar-collapse dropdowns d-none d-md-flex flex-row align-items-start gap-3" id="navbarNavDropdown">
       <ul class="navbar-nav custom-menu-left">
         <li class="nav-item" class="nav-item dropdown" [class.show]="isDropdownOpen('tnusrb')">
           <a class="nav-link" routerLink="/home" routerLinkActive="active-link"
