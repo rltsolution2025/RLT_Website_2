@@ -16,8 +16,8 @@
     <option value="te">తెలుగు</option>
     <option value="kn">ಕನ್ನಡ</option>
   </select>
-    <p>Phone: +91 89255 00513</p>
-  </div>
+  <p>Phone: +91 89255 00513</p>
+</div>
 
 <div class="d-flex align-items-center custom-bg px-0 py-1 bg-white text-navy">
   <div class="container-fluid px-3">
@@ -109,70 +109,89 @@
 
 
 
-      <!-- Fullscreen Mobile Menu -->
+<!-- Fullscreen Mobile Menu -->
 <div class="mobile-menu-overlay" *ngIf="isMenuOpen" (click)="$event.stopPropagation()">
   <!-- Mobile menu header -->
-  <div style="background: #fff; color: #001f3f; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid #eee;">
+  <div
+    style="background: #fff; color: #001f3f; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid #eee;">
     <div style="display: flex; align-items: center;">
       <img src="RLT-Logo.png" alt="RLT Logo" style="height: 40px; margin-right: 12px;" />
       <span style="font-weight: bold; font-size: 1.2rem;">RLT Tri Force Academy</span>
     </div>
-    <button class="mobile-menu-close" (click)="isMenuOpen = false" style="background: none; border: none; font-size: 2.5rem; color: #d00;">
+    <button class="mobile-menu-close" (click)="isMenuOpen = false"
+      style="background: none; border: none; font-size: 2.5rem; color: #d00;">
       &times;
     </button>
   </div>
   <!-- <ul class="navbar-nav custom-menu-left"> -->
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/home" routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }" (click)="navigateAndClose('home')">Home</a>
-    </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+      (click)="navigateAndClose('home')">Home</a>
+  </li>
 
-    <!-- TNUSRB Dropdown (collapsible for mobile) -->
-    <li class="nav-item dropdown" [class.show]="isDropdownOpen('tnusrb')">
-      <a class="nav-link dropdown-toggle" href="#" (click)="$event.preventDefault(); toggleDropdown('tnusrb', $event)">
-        TNUSRB
-      </a>
-      <ul class="dropdown-menu" *ngIf="isDropdownOpen('tnusrb')">
-        <li><a class="dropdown-item" routerLink="/tnusrb-police-constable" (click)="navigateAndClose('tnusrb')">TNUSRB - Police Constable</a></li>
-        <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector" (click)="navigateAndClose('tnusrb')">TNUSRB - Sub Inspector</a></li>
-        <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-finger-print" (click)="navigateAndClose('tnusrb')">TNUSBR - Sub Inspector ( Finger Print )</a></li>
-        <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-technical" (click)="navigateAndClose('tnusrb')">TNUSBR - Sub Inspector ( Technical )</a></li>
-        <li><a class="dropdown-item" routerLink="/tnusrb-watcher" (click)="navigateAndClose('tnusrb')">TNFUSRC - Watcher</a></li>
-        <li><a class="dropdown-item" routerLink="/tnusrb-guard" (click)="navigateAndClose('tnusrb')">TNFUSRC - Guard</a></li>
-        <li><a class="dropdown-item" routerLink="/tnusrb-forester" (click)="navigateAndClose('tnusrb')">TNFUSRC - Forester</a></li>
-      </ul>
-    </li>
+  <!-- TNUSRB Dropdown (collapsible for mobile) -->
+  <li class="nav-item dropdown" [class.show]="isDropdownOpen('tnusrb')">
+    <a class="nav-link dropdown-toggle" href="#" (click)="$event.preventDefault(); toggleDropdown('tnusrb', $event)">
+      TNUSRB
+    </a>
+    <ul class="dropdown-menu" *ngIf="isDropdownOpen('tnusrb')">
+      <li><a class="dropdown-item" routerLink="/tnusrb-police-constable" (click)="navigateAndClose('tnusrb')">TNUSRB -
+          Police Constable</a></li>
+      <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector" (click)="navigateAndClose('tnusrb')">TNUSRB - Sub
+          Inspector</a></li>
+      <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-finger-print"
+          (click)="navigateAndClose('tnusrb')">TNUSBR - Sub Inspector ( Finger Print )</a></li>
+      <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-technical"
+          (click)="navigateAndClose('tnusrb')">TNUSBR - Sub Inspector ( Technical )</a></li>
+      <li><a class="dropdown-item" routerLink="/tnusrb-watcher" (click)="navigateAndClose('tnusrb')">TNFUSRC -
+          Watcher</a></li>
+      <li><a class="dropdown-item" routerLink="/tnusrb-guard" (click)="navigateAndClose('tnusrb')">TNFUSRC - Guard</a>
+      </li>
+      <li><a class="dropdown-item" routerLink="/tnusrb-forester" (click)="navigateAndClose('tnusrb')">TNFUSRC -
+          Forester</a></li>
+    </ul>
+  </li>
 
-    <!-- Indian Army Dropdown (collapsible for mobile) -->
-    <li class="nav-item dropdown" [class.show]="isDropdownOpen('army')">
-      <a class="nav-link dropdown-toggle" href="#" (click)="$event.preventDefault(); toggleDropdown('army', $event)">
-        Indian Army
-      </a>
-      <ul class="dropdown-menu" *ngIf="isDropdownOpen('army')">
-        <li><a class="dropdown-item" routerLink="/NDA-Exam" (click)="navigateAndClose('army')">NDA Exam</a></li>
-        <li><a class="dropdown-item" routerLink="/CDS-Exam" (click)="navigateAndClose('army')">CDS Exam</a></li>
-        <li><a class="dropdown-item" routerLink="/army-general-duty" (click)="navigateAndClose('army')">Army General Duty</a></li>
-        <li><a class="dropdown-item" routerLink="/army-tradesman" (click)="navigateAndClose('army')">Army Tradesmen</a></li>
-        <li><a class="dropdown-item" routerLink="/army-nursing-assistant" (click)="navigateAndClose('army')">Army Nursing Assistant</a></li>
-        <li><a class="dropdown-item" routerLink="/army-soldier-clerk" (click)="navigateAndClose('army')">Army Soldier Clerk</a></li>
-        <li><a class="dropdown-item" routerLink="/army-technical" (click)="navigateAndClose('army')">Army Technical</a></li>
-      </ul>
-    </li>
+  <!-- Indian Army Dropdown (collapsible for mobile) -->
+  <li class="nav-item dropdown" [class.show]="isDropdownOpen('army')">
+    <a class="nav-link dropdown-toggle" href="#" (click)="$event.preventDefault(); toggleDropdown('army', $event)">
+      Indian Army
+    </a>
+    <ul class="dropdown-menu" *ngIf="isDropdownOpen('army')">
+      <li><a class="dropdown-item" routerLink="/NDA-Exam" (click)="navigateAndClose('army')">NDA Exam</a></li>
+      <li><a class="dropdown-item" routerLink="/CDS-Exam" (click)="navigateAndClose('army')">CDS Exam</a></li>
+      <li><a class="dropdown-item" routerLink="/army-general-duty" (click)="navigateAndClose('army')">Army General
+          Duty</a></li>
+      <li><a class="dropdown-item" routerLink="/army-tradesman" (click)="navigateAndClose('army')">Army Tradesmen</a>
+      </li>
+      <li><a class="dropdown-item" routerLink="/army-nursing-assistant" (click)="navigateAndClose('army')">Army Nursing
+          Assistant</a></li>
+      <li><a class="dropdown-item" routerLink="/army-soldier-clerk" (click)="navigateAndClose('army')">Army Soldier
+          Clerk</a></li>
+      <li><a class="dropdown-item" routerLink="/army-technical" (click)="navigateAndClose('army')">Army Technical</a>
+      </li>
+    </ul>
+  </li>
 
-    <!-- Indian Navy Dropdown (collapsible for mobile) -->
-    <li class="nav-item dropdown" [class.show]="isDropdownOpen('navy')">
-      <a class="nav-link dropdown-toggle" href="#" (click)="$event.preventDefault(); toggleDropdown('navy', $event)">
-        Indian Navy
-      </a>
-      <ul class="dropdown-menu" *ngIf="isDropdownOpen('navy')">
-        <li><a class="dropdown-item" routerLink="/navy-mr" (click)="navigateAndClose('navy')">Navy MR</a></li>
-        <li><a class="dropdown-item" routerLink="/navy-technical-ssr" (click)="navigateAndClose('navy')">Navy Technical SSR</a></li>
-        <li><a class="dropdown-item" routerLink="/navy-technical-aa" (click)="navigateAndClose('navy')">Navy Technical AA</a></li>
-        <li><a class="dropdown-item" routerLink="/indian-coast-guard" (click)="navigateAndClose('navy')">Indian Coast Guard</a></li>
-        <li><a class="dropdown-item" routerLink="/indian-coast-guard-navik-gd" (click)="navigateAndClose('navy')">Navik (GD)</a></li>
-        <li><a class="dropdown-item" routerLink="/indian-coast-guard-navik-db" (click)="navigateAndClose('navy')">Navik (DB)</a></li>
-      </ul>
-    </li>
+  <!-- Indian Navy Dropdown (collapsible for mobile) -->
+  <li class="nav-item dropdown" [class.show]="isDropdownOpen('navy')">
+    <a class="nav-link dropdown-toggle" href="#" (click)="$event.preventDefault(); toggleDropdown('navy', $event)">
+      Indian Navy
+    </a>
+    <ul class="dropdown-menu" *ngIf="isDropdownOpen('navy')">
+      <li><a class="dropdown-item" routerLink="/navy-mr" (click)="navigateAndClose('navy')">Navy MR</a></li>
+      <li><a class="dropdown-item" routerLink="/navy-technical-ssr" (click)="navigateAndClose('navy')">Navy Technical
+          SSR</a></li>
+      <li><a class="dropdown-item" routerLink="/navy-technical-aa" (click)="navigateAndClose('navy')">Navy Technical
+          AA</a></li>
+      <li><a class="dropdown-item" routerLink="/indian-coast-guard" (click)="navigateAndClose('navy')">Indian Coast
+          Guard</a></li>
+      <li><a class="dropdown-item" routerLink="/indian-coast-guard-navik-gd" (click)="navigateAndClose('navy')">Navik
+          (GD)</a></li>
+      <li><a class="dropdown-item" routerLink="/indian-coast-guard-navik-db" (click)="navigateAndClose('navy')">Navik
+          (DB)</a></li>
+    </ul>
+  </li>
 
     <!-- Indian Air Force Dropdown (collapsible for mobile) -->
     <li class="nav-item dropdown" [class.show]="isDropdownOpen('airforce')">
@@ -187,20 +206,29 @@
     </li>
 
   <!-- </ul> -->
-   
-      <li class="nav-item dropdown" [class.show]="isDropdownOpen('other-uniformed-services')">
-        <a class="nav-link dropdown-toggle"    href="#" (click)="$event.preventDefault(); toggleDropdown('other-uniformed-services', $event)">
-          Other Uniformed Services
-        </a>
-        <ul class="dropdown-menu no-bullets" *ngIf="isDropdownOpen('other-uniformed-services')">
-          <li><a class="dropdown-item" routerLink="/rpf-sub-inspector" (click)="navigateAndClose('other-uniformed-services')">RPF - Sub Inspector</a></li>
-          <li><a class="dropdown-item" routerLink="/rpf-police-constable" (click)="navigateAndClose('other-uniformed-services')">RPF - Police Constable</a></li>
-          <li><a class="dropdown-item" routerLink="/bsf-tradesman" (click)="navigateAndClose('other-uniformed-services')">BSF - Tradesman</a></li>
-          <li><a class="dropdown-item" routerLink="/bsf-gd" (click)="navigateAndClose('other-uniformed-services')">BSF - GD</a></li>
-          <li><a class="dropdown-item" routerLink="/crpf-constable-gd" (click)="navigateAndClose('other-uniformed-services')">CRPF - Constable ( GD )</a></li>
-          <li><a class="dropdown-item" routerLink="/crpf-tradesman" (click)="navigateAndClose('other-uniformed-services')">CRPF - Tradesman</a></li>
-          <li><a class="dropdown-item" routerLink="/ssc-mts" (click)="navigateAndClose('other-uniformed-services')">SSC - MTS</a></li>
-          <li><a class="dropdown-item" routerLink="/ssc-gd" (click)="navigateAndClose('other-uniformed-services')">SSC - GD</a></li>
-        </ul>
-      </li>
+
+  <li class="nav-item dropdown" [class.show]="isDropdownOpen('other-uniformed-services')">
+    <a class="nav-link dropdown-toggle" href="#"
+      (click)="$event.preventDefault(); toggleDropdown('other-uniformed-services', $event)">
+      Other Uniformed Services
+    </a>
+    <ul class="dropdown-menu no-bullets" *ngIf="isDropdownOpen('other-uniformed-services')">
+      <li><a class="dropdown-item" routerLink="/rpf-sub-inspector"
+          (click)="navigateAndClose('other-uniformed-services')">RPF - Sub Inspector</a></li>
+      <li><a class="dropdown-item" routerLink="/rpf-police-constable"
+          (click)="navigateAndClose('other-uniformed-services')">RPF - Police Constable</a></li>
+      <li><a class="dropdown-item" routerLink="/bsf-tradesman"
+          (click)="navigateAndClose('other-uniformed-services')">BSF - Tradesman</a></li>
+      <li><a class="dropdown-item" routerLink="/bsf-gd" (click)="navigateAndClose('other-uniformed-services')">BSF -
+          GD</a></li>
+      <li><a class="dropdown-item" routerLink="/crpf-constable-gd"
+          (click)="navigateAndClose('other-uniformed-services')">CRPF - Constable ( GD )</a></li>
+      <li><a class="dropdown-item" routerLink="/crpf-tradesman"
+          (click)="navigateAndClose('other-uniformed-services')">CRPF - Tradesman</a></li>
+      <li><a class="dropdown-item" routerLink="/ssc-mts" (click)="navigateAndClose('other-uniformed-services')">SSC -
+          MTS</a></li>
+      <li><a class="dropdown-item" routerLink="/ssc-gd" (click)="navigateAndClose('other-uniformed-services')">SSC -
+          GD</a></li>
+    </ul>
+  </li>
 </div>

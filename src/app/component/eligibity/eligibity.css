@@ -1,4 +1,4 @@
-.card-img-top{
+.card-img-top {
   border-radius: 50%;
   width: 40%;
   height: 115px;
@@ -8,20 +8,24 @@
   align-items: center;
   /* justify-content: center; */
 }
-.card-title{
-width: 100%;
-padding:5px;
-background-color: skyblue;
-text-align: center;
+
+.card-title {
+  width: 100%;
+  padding: 5px;
+  background-color: skyblue;
+  text-align: center;
 }
-.card-subtitle{
-   text-align: center; 
+
+.card-subtitle {
+  text-align: center;
 }
+
 .age-item {
   display: flex;
   justify-content: space-between;
   padding: 4px 0;
 }
+
 /* Age Limit table */
 table {
   width: 100%;
@@ -56,4 +60,45 @@ tbody tr:hover {
 td:first-child {
   text-align: left;
   padding-left: 15px;
+}
+
+.custom-button {
+  background-color: rgb(25, 139, 245);
+  color: white;
+  border-radius: 999px;
+  /* fully rounded pill */
+  height: 40px;
+  border: none;
+  font-weight: bold;
+  padding: 10px 105px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  outline: none;
+}
+
+.custom-button:hover {
+  background-color: rgb(4, 19, 105);
+  color: #f1f1f1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.custom-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button:focus {
+  outline: 3px solid rgba(25, 139, 245, 0.4);
+  outline-offset: 2px;
 }
