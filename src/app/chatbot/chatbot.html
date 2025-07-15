@@ -1,0 +1,25 @@
+<!-- <div class="chatbot-container" *ngIf="isChatOpen">
+  <div class="chatbot-header">
+    <h3 class="font-bold">Customer Support</h3>
+    <button (click)="closeChat()" class="close-button">✖</button>
+  </div>
+  <div class="chatbot-body">
+    <div *ngFor="let message of conversation" [ngClass]="{'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot'}">
+      {{ message.text }}
+    </div>
+  </div>
+  <div class="chatbot-footer" *ngIf="chatState === 'collectingInfo'">
+    <input type="text" [(ngModel)]="user.name" placeholder="Your Name" required />
+    <input type="tel" [(ngModel)]="user.phone" placeholder="Your Phone" required />
+    <button (click)="submitUser_Info()">Continue</button>
+  </div>
+  <div class="chatbot-footer" *ngIf="chatState === 'selectingQuestion'">
+    <div *ngFor="let question of questions" (click)="selectQuestion(question)" class="question-option">
+      {{ question.text }}
+    </div>
+  </div>
+</div>
+
+<button class="chatbot-toggle" (click)="toggleChat()">
+  <img src="path/to/your/image.png" alt="Chatbot" />
+</button> -->

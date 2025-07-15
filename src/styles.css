@@ -10,6 +10,7 @@
 /* Remove margin/padding added to body when banner is shown */
 body {
   top: 0px !important;
+  overflow-x: hidden;
 }
 
 /* Hide the mini toolbar in the top-right */

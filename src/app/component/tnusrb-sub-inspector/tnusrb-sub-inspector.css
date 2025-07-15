@@ -21,7 +21,7 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     margin-top: 40px;
     margin-bottom: 20px;
-    
+
 }
 
 /* Heading inside content */
@@ -68,7 +68,7 @@
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    font-size: 15px; 
+    font-size: 15px;
     font-weight: 450;
     /* responsive support */
 }
@@ -82,7 +82,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
 
-.table-flex-column table  tr .thead-1 {
+.table-flex-column table tr .thead-1 {
     background-color: rgb(127, 182, 219);
     color: #ffffff;
     font-size: 15px;
@@ -90,7 +90,7 @@
     text-align: center;
 }
 
-.table-flex-column table  tr .thead-2 {
+.table-flex-column table tr .thead-2 {
     background-color: rgb(127, 182, 219);
     color: #ffffff;
     font-size: 15px;
@@ -118,13 +118,15 @@
     font-weight: bold;
     border: 1px solid #000000;
 }
-.card-body .SI-main-title{
+
+.card-body .SI-main-title {
     font-style: italic;
     margin-top: 10px;
     margin-bottom: 20px;
     animation: fadeSlideDown 0.3s ease;
     font-weight: 50px;
 }
+
 .card-body .main-title {
     font-style: italic;
     margin-top: 10px;
@@ -230,39 +232,148 @@
     margin-bottom: 20px;
     margin-left: 20px;
 }
-.mt-2 .list-1{
-    margin-top:20px;
+
+.mt-2 .list-1 {
+    margin-top: 20px;
     margin-left: 40px;
-    margin-bottom:40px;
+    margin-bottom: 40px;
 }
-.mt-2 .list-2{
-    margin-top:20px;
-    margin-bottom:75px;
+
+.mt-2 .list-2 {
+    margin-top: 20px;
+    margin-bottom: 75px;
 }
 
 .mt-2 .table {
     margin-top: 50px;
 }
 
-.syllabus-list{
+.syllabus-list {
     margin-left: 40px;
 }
-.syllabus-list ol li{
+
+.syllabus-list ol li {
     padding-top: 10px;
     padding-right: 60px;
 }
-.syllabus-button .custom-syllabus{
-  min-width: 200px;
-  font-weight: 200;
-  text-align: center;
-  background-color: #007a4b;
-  color: #ffffff;
-  font-size: 20px;
+
+.syllabus-button .custom-syllabus {
+    min-width: 200px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #007a4b;
+    color: #ffffff;
+    font-size: 20px;
 }
-.syllabus-button .custom-syllabus:hover{
+
+.syllabus-button .custom-syllabus:hover {
     background-color: #106444;
-    color:antiquewhite;
+    color: antiquewhite;
 }
-.syllabus-button{
-    margin-left: 30%;
+
+.syllabus-button {
+    margin-left: 15%;
+}
+
+@media (max-width: 480px) {
+    .syllabus-button .custom-syllabus {
+        font-size: 14px;
+        padding: 8px 15px;
+        min-width: 150px;
+        margin-left: -5%;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.float-up-down {
+    animation: float 3s ease-in-out infinite;
+}
+
+@media (max-width: 576px) {
+    .table {
+        font-size: 12px;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 4px;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .tnusrb-police-constable-content .table,
+    .tnusrb-police-constable-content-1 .table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tnusrb-police-constable-content .table table,
+    .tnusrb-police-constable-content-1 .table table {
+        width: 600px;
+        /* Ensures table can scroll */
+    }
+
+    .tnusrb-police-constable-content,
+    .tnusrb-police-constable-content-1 {
+        padding: 10px;
+    }
+
+    .tnusrb-sub-inspector-title {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .tnusrb-police-constable-heading {
+        font-size: 18px;
+    }
+
+    .tnusrb-police-constable-heading-1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tnusrb-sub-inspector-title .d-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .tnusrb-sub-inspector-title .d-flex div {
+        max-width: 100%;
+    }
+
+
+}
+
+.img-fluid {
+    width: 700px;
+    height: 150px;
+}
+
+@media (max-width: 576px) {
+    .img-fluid {
+        width: 500px;
+        height: 300px;
+    }
 }

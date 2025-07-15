@@ -189,7 +189,14 @@ height : 50vh;
   transition: background-color 0.3s ease;
   font-weight: bold;
 }
-
+.tri-force{
+  background-color: #030357;
+  padding: 4px;
+  color: #f8f9fa;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .form button:hover {
   background-color: #030357;
 }
@@ -482,15 +489,46 @@ height : 50vh;
   justify-content: center;
   align-items: center;
 }
-.eli-btn{
+.eli-btn {
   background-color: rgb(25, 139, 245);
-  border-radius: 20px;
-  width: auto;
+  color: white;
+  border-radius: 999px; /* fully rounded pill */
   height: 40px;
   border: none;
-  /* color: #0a0f4b; */
-  font-weight: 500;
+  font-weight: bold;
+  padding: 0 20px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  outline: none;
 }
+
+.eli-btn:hover {
+  background-color: rgb(4, 19, 105);
+  color: #f1f1f1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.eli-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.eli-btn:focus {
+  outline: 3px solid rgba(25, 139, 245, 0.4);
+  outline-offset: 2px;
+}
+
 .resize-image{
   width: 70%;
   /* padding-top: 5px; */
@@ -530,3 +568,20 @@ height : 50vh;
   border: none;
   cursor: pointer;
 } */ 
+
+
+/**/
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #c1dcf7;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
