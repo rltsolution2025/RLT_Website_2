@@ -31,8 +31,12 @@
       <h5>Quick Links</h5>
       <ul class="list-unstyled mt-2">
         <li class="medium-li"><a routerLink="/home" class="text-white text-decoration-none">Home</a></li>
-        <li class="medium-li"><a routerLink="/contact" class="text-white text-decoration-none">Contact</a></li>
-        <li class="medium-li"><a href="/tnusrb-sub-inspector" class="text-white text-decoration-none">SI Coaching</a></li>
+        <li class="medium-li"><a [routerLink]="['/home']" [fragment]="'enquiry'" class="text-white text-decoration-none">Contact</a></li>
+        <li class="medium-li"><a routerLink="/tnusrb-sub-inspector" class="text-white text-decoration-none">SI Coaching</a></li>
+        <li class="medium-li"><a routerLink="/indian-air-force-group-y"class="text-white text-decoration-none">Indian Air Force (Group Y)</a></li>
+        <li class="medium-li"><a routerLink="/army-general-duty"class="text-white text-decoration-none">Army general Duty</a></li>
+        <li class="medium-li"><a routerLink="/indian-coast-guard"class="text-white text-decoration-none">Indian Coast Guard</a></li>
+        <li class="medium-li"><a routerLink="/crpf-constable-gd"class="text-white text-decoration-none">CRPF-Constable (General Duty)</a></li>
       </ul>
     </div>
 

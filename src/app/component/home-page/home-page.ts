@@ -5,7 +5,7 @@ import {
   ElementRef,
   Inject,
   PLATFORM_ID,
-  
+
 } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -20,10 +20,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./home-page.css'],
   imports: [
     CommonModule,
-    FormsModule,RouterLink,
+    FormsModule, RouterLink,
   ]
 })
 export class HomePage implements AfterViewInit {
+  scrollToEnquiryForm() {
+    throw new Error('Method not implemented.');
+  }
   @ViewChild('myCarousel') carouselElement!: ElementRef;
   @ViewChild('testimonialCarousel') testimonialCarousel!: ElementRef;
 
@@ -35,15 +38,15 @@ export class HomePage implements AfterViewInit {
   }
 
   formSubmitted = false;
-isPopupOpen = false;
+  isPopupOpen = false;
 
-openPopup() {
-  this.isPopupOpen = true;
-}
+  openPopup() {
+    this.isPopupOpen = true;
+  }
 
-closePopup() {
-  this.isPopupOpen = false;
-}
+  closePopup() {
+    this.isPopupOpen = false;
+  }
 
 
   user = {
@@ -52,9 +55,9 @@ closePopup() {
     number: '',
     district: '',
     course: '',
-    specialization:'',
+    specialization: '',
     join: false
-    
+
   };
 
   testimonials = [
@@ -94,7 +97,7 @@ closePopup() {
       review: 'The instructors are experienced and supportive. Helped me crack TNUSRB PC exam.'
     }
   ];
-cards = [
+  cards = [
     {
       image: '/police.png',
       title: 'Police Coaching',
@@ -163,7 +166,7 @@ cards = [
     }
   ];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiServices:Api,private router: Router) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private apiServices: Api, private router: Router) { }
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -230,11 +233,11 @@ cards = [
     }
   }
   courseOptions: { [key: string]: string[] } = {
-    'TNUSRB': ['Police Constable', 'Sub Inspector', 'Sub Inspector-Finger Print', 'Sub Inspector-Technical','Watcher','Guard', 'Forester'],
-    'Army': ['NDA', 'CDS', 'General Duty', 'Tradesman','Nursing Assistant', 'Soldier-Clerk / Store Keeper Technical', 'Technical'],
-    'Navy': ['MR', 'Technical SSR', 'Technical AA' , ' Coast Gaurd', 'Coast Guard Navik (GD)', 'Coast Guard Navik (DB)'],
+    'TNUSRB': ['Police Constable', 'Sub Inspector', 'Sub Inspector-Finger Print', 'Sub Inspector-Technical', 'Watcher', 'Guard', 'Forester'],
+    'Army': ['NDA', 'CDS', 'General Duty', 'Tradesman', 'Nursing Assistant', 'Soldier-Clerk / Store Keeper Technical', 'Technical'],
+    'Navy': ['MR', 'Technical SSR', 'Technical AA', ' Coast Gaurd', 'Coast Guard Navik (GD)', 'Coast Guard Navik (DB)'],
     'Air Force': ['Indian Air Force Group X & Y', 'Indian Air Force Group X', 'Indian Air Force Group Y'],
-    'Other Uniformed Services': ['RPF-Sub Inspector', 'RPF-Police Constable', 'BSF-Tradesman', 'BSF-GD', 'CRPF-Constable (GD)', 'CRPF-Tradesman', 'SSC-MTS','SSC-GD'],
+    'Other Uniformed Services': ['RPF-Sub Inspector', 'RPF-Police Constable', 'BSF-Tradesman', 'BSF-GD', 'CRPF-Constable (GD)', 'CRPF-Tradesman', 'SSC-MTS', 'SSC-GD'],
   };
 
   get specializations(): string[] {
@@ -243,30 +246,26 @@ cards = [
 
 
   onSubmit(form: any) {
-  if (form.invalid) {
-    console.warn('Form is invalid. Please correct the errors.');
-    return;
-  }
-
-  const formData = { ...this.user };
-  // console.log(formData);
-
-  this.apiServices.submitForm(formData).subscribe({
-    next: (res: any) => {
-      console.log('✅ Form submitted!', res);
-
-      form.resetForm(); // Reset form
-
-      // Navigate immediately after successful submission
-      this.router.navigate(['/thank-you']);
-    },
-    error: (err: any) => {
-      console.error('❌ Error submitting form:', err);
+    if (form.invalid) {
+      console.warn('Form is invalid. Please correct the errors.');
+      return;
     }
-  });
-}
 
+    const formData = { ...this.user };
+    // console.log(formData);
 
+    this.apiServices.submitForm(formData).subscribe({
+      next: (res: any) => {
+        console.log('✅ Form submitted!', res);
 
-  
-}
+        form.resetForm(); // Reset form
+
+        // Navigate immediately after successful submission
+        this.router.navigate(['/thank-you']);
+      },
+      error: (err: any) => {
+        console.error('❌ Error submitting form:', err);
+      }
+    });
+  }
+} 
