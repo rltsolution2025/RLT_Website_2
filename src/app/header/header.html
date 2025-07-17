@@ -1,6 +1,6 @@
 <!-- Container -->
 
-<div class="d-flex justify-content-between contact align-items-center">
+<div class="d-flex flex-column flex-md-row justify-content-between contact align-items-center">
   <small>
     <i class="fa-solid fa-envelope"></i>
     Email:
@@ -17,7 +17,13 @@
     <option value="te">తెలుగు</option>
     <option value="kn">ಕನ್ನಡ</option>
   </select>
-  <p>Phone: +91 89255 00513</p>
+  <small>
+    <i class="fa-solid fa-mobile-screen"></i>
+    Phone:
+    <a href="tel:+91 89255 00513" class="text-navy text-decoration-none" style="padding-top: 20px;">
+      +91 89255 00513
+    </a>
+  </small>
 </div>
 
 <div class="d-flex align-items-center custom-bg px-0 py-1 bg-white text-navy">
@@ -50,28 +56,36 @@
                 Finger Print )</a></li>
             <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-technical" routerLinkActive="active-dropdown"
                 [routerLinkActiveOptions]="{ exact: true }">TNUSBR - Sub Inspector ( Technical )</a></li>
-            <li><a class="dropdown-item" routerLink="/tnusrb-watcher" routerLinkActive="active-dropdown"
+            <li><a class="dropdown-item" routerLink="/tnfursc-watcher" routerLinkActive="active-dropdown"
                 [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Watcher</a></li>
-            <li><a class="dropdown-item" routerLink="/tnusrb-guard" routerLinkActive="active-dropdown"
+            <li><a class="dropdown-item" routerLink="/tnfursc-guard" routerLinkActive="active-dropdown"
                 [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Guard</a></li>
-            <li><a class="dropdown-item" routerLink="/tnusrb-forester" routerLinkActive="active-dropdown"
+            <li><a class="dropdown-item" routerLink="/tnfursc-forester" routerLinkActive="active-dropdown"
                 [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Forester</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" (click)="toggleDropdown('army', $event)">Indian Army </a>
+          <a class="nav-link dropdown-toggle" href="#" (click)="toggleDropdown('army', $event)"
+            routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Indian Army </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="/NDA-Exam" (click)="navigateAndClose('army')">NDA Exam</a></li>
-            <li><a class="dropdown-item" routerLink="/CDS-Exam" (click)="navigateAndClose('army')">CDS Exam</a></li>
-            <li><a class="dropdown-item" routerLink="/army-general-duty" (click)="navigateAndClose('army')">Army General
+            <li><a class="dropdown-item" routerLink="/NDA-Exam" (click)="navigateAndClose('army')"
+                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">NDA Exam</a></li>
+            <li><a class="dropdown-item" routerLink="/CDS-Exam" (click)="navigateAndClose('army')"
+                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">CDS Exam</a></li>
+            <li><a class="dropdown-item" routerLink="/army-general-duty" (click)="navigateAndClose('army')"
+                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Army General
                 Duty</a></li>
-            <li><a class="dropdown-item" routerLink="/army-tradesman" (click)="navigateAndClose('army')">Army
+            <li><a class="dropdown-item" routerLink="/army-tradesman" (click)="navigateAndClose('army')"
+                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Army
                 Tradesmen</a></li>
-            <li><a class="dropdown-item" routerLink="/army-nursing-assistant" (click)="navigateAndClose('army')">Army
+            <li><a class="dropdown-item" routerLink="/army-nursing-assistant" (click)="navigateAndClose('army')"
+                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Army
                 Nursing Assistant</a></li>
-            <li><a class="dropdown-item" routerLink="/army-soldier-clerk" (click)="navigateAndClose('army')">Army
+            <li><a class="dropdown-item" routerLink="/army-soldier-clerk" (click)="navigateAndClose('army')"
+                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Army
                 Soldier Clerk</a></li>
-            <li><a class="dropdown-item" routerLink="/army-technical" (click)="navigateAndClose('army')">Army
+            <li><a class="dropdown-item" routerLink="/army-technical" (click)="navigateAndClose('army')"
+                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Army
                 Technical</a></li>
           </ul>
         </li>
@@ -104,6 +118,7 @@
           </ul>
         </li>
       </ul>
+       <app-mobile-header ></app-mobile-header>
       <!--<div class="d-md-none">
         <button class="navbar-toggler custom-toggler d-block d-lg-none" type="button"
           (click)="$event.stopPropagation(); toggleMenu()">
@@ -133,4 +148,4 @@
 
 
 
-  <app-mobile-header></app-mobile-header>
+ 

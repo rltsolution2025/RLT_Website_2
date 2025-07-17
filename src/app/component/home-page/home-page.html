@@ -125,7 +125,7 @@
         </div>
 
         <!-- Course -->
-        <select name="course" [(ngModel)]="user.course" required #course="ngModel">
+        <select name="course" [(ngModel)]="user.course" required #course="ngModel" class="course-options">
           <option value="" selected>Select Course</option>
           <option value="TNUSRB">TNUSRB </option>
           <option value="Army">Army</option>
@@ -139,7 +139,7 @@
         </div>
 
         <div *ngIf="specializations.length > 0">
-          <select name="specialization" [(ngModel)]="user.specialization" required #specialization="ngModel">
+          <select name="specialization" [(ngModel)]="user.specialization" required #specialization="ngModel" class="course-options">
             <option value="" selected>Select Specialization</option>
             <option *ngFor="let option of specializations" [value]="option">{{ option }}</option>
           </select>
