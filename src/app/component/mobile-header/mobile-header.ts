@@ -92,10 +92,19 @@ export class MobileHeader {
   }
 
   toggleDropdown(key: string, event: Event) {
-    event.preventDefault();
-    event.stopPropagation();
-    this.dropdownStates[key] = !this.dropdownStates[key];
-  }
+  event.preventDefault();
+  event.stopPropagation();
+
+  // close all others
+  Object.keys(this.dropdownStates).forEach(k => {
+    if (k !== key) {
+      this.dropdownStates[k] = false;
+    }
+  });
+
+  // toggle the clicked one
+  this.dropdownStates[key] = !this.dropdownStates[key];
+}
 
   isDropdownOpen(key: string): boolean {
     return !!this.dropdownStates[key];
