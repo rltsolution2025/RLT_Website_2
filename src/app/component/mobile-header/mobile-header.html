@@ -21,7 +21,7 @@
                         <li *ngFor="let item of menuItems">
                                 <a href="#" (click)="toggleDropdown(item.key, $event)">
                                         {{ item.label }}
-                                        <span class="symbol-innner">
+                                        <span class="symbol-inner" [class.rotated]="isDropdownOpen(item.key)">
                                                 {{ isDropdownOpen(item.key) ? '−' : '+' }}
                                         </span>
                                 </a>

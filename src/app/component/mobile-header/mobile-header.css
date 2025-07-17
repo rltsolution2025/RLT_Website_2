@@ -58,15 +58,14 @@
   margin-top: 0.5rem;
 }
 
-.rotated {
-  transform: rotate(90deg);
+.symbol-inner {
   display: inline-block;
-}
-
-
-
-.symbol-innner {
-  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  font-size: 2rem;
   color: #0d6efd;
   font-weight: bold;
+}
+
+.symbol-inner.rotated {
+  transform: rotate(180deg);
 }
