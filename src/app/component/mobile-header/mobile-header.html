@@ -25,8 +25,8 @@
                                                 {{ isDropdownOpen(item.key) ? '−' : '+' }}
                                         </span>
                                 </a>
-                                <ul *ngIf="isDropdownOpen(item.key)">
-                                        <li *ngFor="let child of item.children">
+                                <ul *ngIf="isDropdownOpen(item.key)" class="box-container">
+                                        <li *ngFor="let child of item.children" >
                                                 <a routerLink="{{child.link}}"
                                                         (click)="navigateAndClose()">{{child.label}}</a>
                                         </li>

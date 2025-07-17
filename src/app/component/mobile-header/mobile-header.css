@@ -69,3 +69,32 @@
 .symbol-inner.rotated {
   transform: rotate(180deg);
 }
+.box-container {
+  border: 1px solid #ddd;         /* outer border */
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: hidden;              /* if you want rounded corners clean */
+}
+
+.box-container li {
+  border-bottom: 1px solid #eee; /* line between items */
+}
+
+.box-container li:last-child {
+  border-bottom: none;          /* remove line after last item */
+}
+
+.box-container li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #0f2bc9;
+}
+
+.box-container li a::after {
+  background-color: #f5f5f5;
+  color: #1a237e;
+}
