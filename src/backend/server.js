@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/connectDB');
 const register=require('./routes/register')
+const chatbot = require('./routes/chatbot'); // Import the chatbot route
 // const enquiry = require('./routes/enquiry'); // Import the enquiry route if needed
 
 
@@ -23,11 +24,13 @@ connectDB();
 
 // POST route to save user data
 app.use('/api', register);
+app.use('/api', chatbot); // Use the chatbot route
 
 
 app.get('/', (req, res) => {
   res.send('Welcome to RLT Academy API'); 
 });
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);

@@ -1,6 +1,6 @@
 .custom-carousel {
   width: 100%; 
-  height: 100vh;
+  height: 65vh;
   margin: 5px 0; 
   overflow: hidden;
   box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
@@ -11,7 +11,7 @@
 /* Ensure the image fills the carousel container */
 .custom-carousel .carousel-item img {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   /* object-fit: cover; */
   border: none;
   outline: none;
@@ -568,3 +568,21 @@ height : 50vh;
   border: none;
   cursor: pointer;
 } */ 
+
+
+/**/
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #c1dcf7;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+

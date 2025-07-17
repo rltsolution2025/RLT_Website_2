@@ -7,11 +7,12 @@ import {
 } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { MobileHeader } from '../component/mobile-header/mobile-header';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterLink, RouterLinkActive, CommonModule,MobileHeader],
   templateUrl: './header.html',
   styleUrl: './header.css'
 })

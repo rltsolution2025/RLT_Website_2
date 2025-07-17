@@ -37,6 +37,8 @@ import { Contact } from './component/contact/contact';
 import { Eligibity } from './component/eligibity/eligibity';
 import { RegisterForm } from './component/register-form/register-form';
 import { Thankyou } from './thankyou/thankyou';
+import { Chatbot } from './chatbot/chatbot';
+import { MobileHeader } from './component/mobile-header/mobile-header';
 
 
 export const routes: Routes = [
@@ -78,5 +80,7 @@ export const routes: Routes = [
     {path:'eligible', component:Eligibity},
     {path:'register-form',component:RegisterForm},
     {path:"thank-you", component:Thankyou},
+    {path:'chatbot', component: Chatbot},
+    {path:'moblie-view', component:MobileHeader},
     {path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
