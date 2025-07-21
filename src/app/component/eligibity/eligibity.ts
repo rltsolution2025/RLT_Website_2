@@ -104,7 +104,7 @@ courses = [
     {
      
       image: '/police.png',
-      title: 'TNUSRB',
+      title: 'TNFURSC',
       designation:'Watcher',
       description: 'A TNUSRB Watcher serves as a vital part of the law enforcement system, primarily focused on surveillance, intelligence gathering, and assisting in maintaining public order. Key responsibilities include monitoring suspicious activities, supporting senior officers with background information, and aiding in crime detection efforts. The role demands alertness, confidentiality, commitment, and the ability to observe and report accurately under diverse conditions.',
       Education: '10th',
@@ -121,12 +121,12 @@ courses = [
     },
       Height:'156',
       Recruitment :'Exam / Physical',
-      link: '/tnusrb-watcher'
+      link: '/tnfursc-watcher'
     },
     {
      
       image: '/police.png',
-      title: 'TNUSRB',
+      title: 'TNFURSC',
       designation:'Guard',
       description: 'A TNUSRB Guard plays an important role in ensuring the security of government premises, properties, and personnel. Key responsibilities include controlling access points, monitoring for unauthorized activities, and responding to security threats or emergencies. The role demands alertness, physical fitness, discipline, and a strong sense of responsibility to uphold safety and order at all times.',
       Education: '12th',
@@ -143,11 +143,11 @@ courses = [
     },
       Height:'156',
       Recruitment :'Exam / Physical',
-      link: '/tnusrb-guard'
+      link: '/tnfursc-guard'
     },
     {
       image: '/police.png',
-      title: 'TNUSRB',
+      title: 'TNFURSC',
       designation:'Forester',
       description: 'A TNUSRB Forester plays a key role in protecting forest resources, wildlife, and enforcing environmental laws. Key responsibilities include patrolling forest areas, preventing illegal activities like poaching and logging, and assisting in conservation efforts. The role demands physical endurance, environmental awareness, integrity, and the ability to work in remote and challenging natural terrains.',
       Education: 'UG',
@@ -164,7 +164,7 @@ courses = [
     },
       Height:'156',
       Recruitment :'Exam / Physical / Medical',
-      link: '/tnusrb-forester'
+      link: '/tnfursc-forester'
     },
     {
       image: '/army.png',

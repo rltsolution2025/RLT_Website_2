@@ -7,7 +7,7 @@ declare const translateLang: any;
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,Footer],
+  imports: [RouterOutlet,Header,Footer,],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

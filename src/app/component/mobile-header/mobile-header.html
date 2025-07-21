@@ -1,0 +1,37 @@
+<!-- Hamburger Button -->
+<button class="hamburger" (click)="toggleMenu($event)">
+        <span *ngIf="!isMenuOpen">&#9776;</span>
+        <span *ngIf="isMenuOpen">&times;</span>
+</button>
+
+<!-- Overlay -->
+<div class="menu-overlay" *ngIf="isMenuOpen" (click)="closeMenu()">
+        <div class="menu-content" (click)="$event.stopPropagation()">
+                <div class="header">
+                        <img src="RLT-Logo.png" alt="RLT Logo" style="height: 40px; margin-right: 12px;" />
+                        <span class="RLT_text" style="font-weight: bold; font-size: 1.2rem;">RLT Tri Force
+                                Academy</span>
+                        <button (click)="closeMenu()"
+                                style="background: none; border: none; font-size: 2.5rem; color: #d00;">&times;</button>
+                </div>
+
+                <ul class="menu-list">
+                        <li><a routerLink="/home" (click)="navigateAndClose()">Home</a></li>
+
+                        <li *ngFor="let item of menuItems">
+                                <a href="#" (click)="toggleDropdown(item.key, $event)">
+                                        {{ item.label }}
+                                        <span class="symbol-inner" [class.rotated]="isDropdownOpen(item.key)">
+                                                {{ isDropdownOpen(item.key) ? '−' : '+' }}
+                                        </span>
+                                </a>
+                                <ul *ngIf="isDropdownOpen(item.key)" class="box-container">
+                                        <li *ngFor="let child of item.children" >
+                                                <a routerLink="{{child.link}}"
+                                                        (click)="navigateAndClose()">{{child.label}}</a>
+                                        </li>
+                                </ul>
+                        </li>
+                </ul>
+        </div>
+</div>

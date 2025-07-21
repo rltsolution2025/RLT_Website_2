@@ -25,17 +25,20 @@
     padding-right: 8px;
   }
 }
- .custom-bg {
-   /* background-color: rgb(5, 5, 139); */
-   box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
-   background: linear-gradient(to bottom, #4facfe, #0026fe);
-   flex-direction: column;
- }
+.custom-bg {
+  /* background-color: rgb(5, 5, 139); */
+  box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #5c75d8, #05058b);
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
- body {
-   margin: 0;
-   padding: 0;
- }
+body {
+  margin: 0;
+  padding: 0;
+}
 
 
 
@@ -43,19 +46,37 @@
   color: rgb(255, 255, 255);
   font-size: large;
   font-weight: bold;
-  padding-right: 24px;
-  padding-left: 8px;
+  padding: 4px 8px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
- .nav-link:hover {
-   color: #1A237E;
- }
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(4, 66, 235);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
- /* Show dropdown on hover */
- .nav-item.dropdown:hover .dropdown-menu {
-   display: block;
-   margin-top: 10px;
- }
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 10px;
+}
 
 
 
@@ -70,448 +91,6 @@
   z-index: 10;
 }
 
- /* Style the dropdown menu container */
- .dropdown-menu {
-   background-color: whitesmoke;
-   border-radius: 8px;
-   padding: 10px;
-   box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
-   margin-top: 10px;
-   position: absolute;
-   top: 100%;
-   /* Directly below the nav item */
-   left: 0;
-   z-index: 999;
-   display: none;
- }
-
- /* Style each item inside dropdown */
- .dropdown-item {
-   color: #0d6efd;
-   font-weight: 500;
-   padding: 8px 16px;
-   border-radius: 4px;
- }
-
- .other-item {
-   color: white;
-   font-size: medium;
-   font-weight: 500;
-   padding: 8px 16px;
-   text-decoration: none;
- }
-
- .other-item:hover {
-   background-color: whitesmoke;
-   color: #1A237E;
- }
-
- /* Hover effect for dropdown items */
- .dropdown-item:hover {
-   background-color: #ffffff;
-   color: #1A237E;
- }
-
- .active-link {
-   /* color: rgb(235, 8, 8); */
-   color: #1A237E;
-   font-weight: bold;
-   font-size: large;
- }
-
-
- /* Style the dropdown menu container */
- .dropdown-menu {
-   /* background-color: #d8bdbd; */
-   background-color: whitesmoke;
-   border-radius: 8px;
-   padding: 10px;
-   box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
-   /* Add shadow */
-   margin-top: 10px;
- }
-
- /* Style each item inside dropdown */
- .dropdown-item {
-   color: #0d6efd;
-   /* color: white; */
-   /* Blue text */
-   font-weight: 500;
-   padding: 8px 16px;
-   border-radius: 4px;
-   /* Optional: round edges on hover */
- }
-
- .active-dropdown {
-   background-color: #0d6efd;
-   color: white;
-   font-weight: bold;
-   border-radius: 4px;
- }
-
- .navbar-nav .dropdown:hover .dropdown-menu {
-   display: block;
-   margin-top: 0;
-   flex: wrap;
- }
-
- /* Hover effect for dropdown items */
- .dropdown-item:hover {
-   background-color: #ffffff;
-   color: #1A237E;
-   /* Text on hover */
- }
-
- .dropdown-menu {
-   animation: fadeIn 0.3s ease-in-out;
- }
-
- .muppadai-logo {
-   width: 200px;
-   height: 50px;
- }
-
- @keyframes fadeIn {
-   from {
-     opacity: 0;
-     transform: translateY(10px);
-   }
-
-   to {
-     opacity: 1;
-     transform: translateY(0);
-   }
- }
-
- .active-dropdown {
-   background-color: #0d6efd;
-   /* Blue background */
-   color: white;
-   /* White text */
-   font-weight: bold;
-   border-radius: 4px;
- }
-
- .navbar-nav .dropdown:hover .dropdown-menu {
-   display: block;
-   margin-top: 0;
-   /* Optional spacing adjustment */
- }
-
- .navbar-nav .dropdown-toggle::after {
-   transition: transform 0.2s ease;
- }
-
- .navbar-nav .dropdown:hover .dropdown-toggle::after {
-   transform: rotate(180deg);
-   /* Optional animation */
- }
-
- .active-dropdown>.nav-link,
- .active-dropdown .dropdown-item.active-dropdown {
-   background-color: #0d6efd !important;
-   color: white !important;
-   font-weight: bold;
-   border-radius: 4px;
- }
-
- .logo-container {
-   display: flex;
-   align-items: center;
-   gap: 0;
-   width: 250px;
-   max-width: 100%;
-   overflow: hidden;
-   text-decoration: none;
-   color: white;
- }
-
- @media (max-width: 576px) {
-   .center-on-mobile {
-     justify-content: center !important;
-   }
- }
-
- .rlt-police-academy {
-   width: 50px;
-   height: 50px;
-   background-color: #ffffff;
-   border-radius: 100px;
- }
-
- .logo-text {
-   line-height: 1.2;
- }
-
- .logo-title-1 {
-   font-size: 18px;
-   font-weight: 700;
-   color: #ffffff;
- }
-
- .logo-title-2 {
-   font-size: 12px;
-   font-weight: 400;
-   color: #dcdcdc;
-   padding-left: 10px;
- }
-
- @media (max-width: 991.98px) {
-   .navbar-nav .dropdown:hover .dropdown-menu {
-     display: none !important;
-   }
-
-   .dropdown-menu {
-     position: static !important;
-     display: none;
-   }
-
-   .dropdown-menu.show {
-     display: block;
-   }
-
-   .navbar-nav .dropdown-toggle::after {
-     transform: none !important;
-   }
- }
-
-
-.custom-menu-left {
-  margin-left: 0;
-  gap: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-@media (max-width: 970px) {
-  .custom-menu-left {
-    display: none !important;
-  }
-  .nav-item.dropdown.other-uniformed-services {
-    display: none !important;
-  }
-  .header-row-mobile {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100%;
-  }
-  .logo-container {
-    margin-right: 0 !important;
-    width: auto !important;
-    max-width: 70vw;
-  }
-  .custom-toggler {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    order: 2;
-  }
-}
-
- /*language drop down*/
- /* Hide top banner */
- #custom_translate_btn {
-   background-color: #f1f1f1;
-   padding: 4px 8px;
-   border-radius: 4px;
-   font-weight: bold;
- }
-
- #custom_translate_btn:hover {
-   background-color: #ddd;
- }
-
- /* Toggle */
- /* Fixed toggle button */
- /* .custom-toggler {
-  position: fixed;
-  top: 1.5rem;
-  right: 1rem;
-  z-index: 2000;
-  background: white;
-  border: none;
-  font-size: 2rem;
-} */
-
-
- .dropdown-menu.show {
-   display: block !important;
- }
-
- /* Fullscreen overlay menu */
- .mobile-menu-overlay {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
-   background: white;
-   z-index: 1500;
-   overflow-y: auto;
-   padding: 2rem;
- }
-
- .mobile-menu-overlay,
- .mobile-menu-overlay * {
-   color: rgba(22, 22, 119, 0.966) !important;
- }
-
- /* Responsive: hide old Bootstrap collapse nav on small screens */
- @media (max-width: 977px) {
-   #navbarNavDropdown {
-     display: none !important;
-   }
- }
-
- .logo-row,
-  .navbar-toggler {
-    display: flex; /* Aligns logo container and toggle button */
-    justify-content: space-between; /* Adjusts the spacing, if needed */
-    align-items: center; /* Ensures they are centrally aligned vertically */
-  }
-
-   .navbar-toggler {
-    margin-left: auto; /* Pushes the toggle button to the right */
-  }
-
- .navbar-toggler .close-btn {
-   position: absolute;
-   top: 1rem;
-   right: 1rem;
-   font-size: 2rem;
-   border: none;
-   background: none;
- }
-
- .dropdown-toggle {
-   list-style: none;
- }
-
- .dropdown-menu.show {
-   display: block;
-
- }
-
-
- .mobile-menu-overlay {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: white;
-   z-index: 1050;
-   overflow-y: auto;
-   padding: 1rem;
- }
-
- /*hide other uniformed service for small screen*/
- @media (max-width: 480px) {
-   .hide-on-mobile {
-     display: none !important;
-   }
- }
-
- .dropdown-menu.show {
-   display: block;
- }
-
- .mobile-menu-overlay {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: white;
-   z-index: 1050;
-   overflow-y: auto;
-   padding: 1rem;
- }
-
- /*hide other uniformed service for small screen*/
- @media (max-width: 480px) {
-   .hide-on-mobile {
-     display: none !important;
-   }
- }
-
- .custom-toggler {
-   font-size: 24px;
-   border: none;
-   background: transparent;
- }
-
- @media (max-width: 980px) {
-   .secondary-nav-container {
-    display: none !important;
-     margin-top: -8px;
-     margin-bottom: 0;
-     padding-left: 0;
-     padding-right: 0;
-   }
- }
- .language {
-   background-color: #f1f1f1;
-   /* padding: 4px 8px;  */
-   height: 30px;
-   border-radius: 10px;
- }
- .contact{
-    background-color: #ffffff;
-    /* padding: 4px 8px;  */
-    height: 30px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-    margin-bottom: 10px;
- }
-
- .drop-down-mob{
-  background-color: #f1f1f1;
- }
-.custom-bg {
-  /* background-color: rgb(5, 5, 139); */
-  box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
-  background: linear-gradient(to bottom, #4facfe, #0026fe);
-  /*background-color: #0d6efd;*/
-  flex-direction: column;
-}
-
-.nav-link {
-  color: rgb(255, 255, 255);
-  font-size: large;
-  font-weight: bold;
-  padding-right: 100px;
-}
-
-.nav-link:hover {
-  color: #1A237E;
-}
-
-
-/* Show dropdown on hover */
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 10px;
-}
-
-
-.nav-link {
-  color: rgb(255, 255, 255);
-  font-size: large;
-  font-weight: bold;
-  padding-right: 100px;
-}
-
-.nav-item {
-  padding-right: 20px;
-  list-style-type: none;
-
-}
-
 /* Style the dropdown menu container */
 .dropdown-menu {
   background-color: whitesmoke;
@@ -519,11 +98,17 @@
   padding: 10px;
   box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
   margin-top: 10px;
+  position: absolute;
+  top: 100%;
+  /* Directly below the nav item */
+  left: 0;
+  z-index: 999;
+  display: none;
 }
 
 /* Style each item inside dropdown */
 .dropdown-item {
-  color: #0d6efd;
+  color: #ffffff;
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 4px;
@@ -550,24 +135,18 @@
 
 .active-link {
   /* color: rgb(235, 8, 8); */
-  color: #1A237E;
+  color: #f5f5f7;
   font-weight: bold;
   font-size: large;
+  background: rgb(4, 66, 235);
 }
 
-.nav-item {
-  padding-right: 20px;
-}
 
 /* Style the dropdown menu container */
 .dropdown-menu {
   /* background-color: #d8bdbd; */
   background-color: whitesmoke;
-  /* Change menu background */
-  /* border: 1px solid #0d6efd; */
-  /* Optional: blue border */
   border-radius: 8px;
-  /* Rounded corners */
   padding: 10px;
   box-shadow: 10px 10px 10px 10px rgba(10, 0, 0, 0.1);
   /* Add shadow */
@@ -595,6 +174,8 @@
 .navbar-nav .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
+  flex: wrap;
+  
 }
 
 /* Hover effect for dropdown items */
@@ -606,6 +187,7 @@
 
 .dropdown-menu {
   animation: fadeIn 0.3s ease-in-out;
+  margin-right: 1150px;
 }
 
 .muppadai-logo {
@@ -661,6 +243,9 @@
   display: flex;
   align-items: center;
   gap: 0;
+  width: 250px;
+  max-width: 100%;
+  overflow: hidden;
   text-decoration: none;
   color: white;
 }
@@ -714,16 +299,42 @@
   }
 }
 
+
 .custom-menu-left {
-  margin-left: 210px;
-  /* Adjust this value to control how far from the left */
-  gap: 15px;
+  margin-left: 0;
+  gap: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 120px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 970px) {
   .custom-menu-left {
-    margin-left: 0;
-    padding-left: 0;
+    display: none !important;
+  }
+
+  .nav-item.dropdown.other-uniformed-services {
+    display: none !important;
+  }
+
+  .header-row-mobile {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100%;
+  }
+
+  .logo-container {
+    margin-right: 0 !important;
+    width: auto !important;
+    max-width: 70vw;
+  }
+
+  .custom-toggler {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    order: 2;
   }
 }
 
@@ -776,10 +387,25 @@
 }
 
 /* Responsive: hide old Bootstrap collapse nav on small screens */
-@media (max-width: 768px) {
+@media (max-width: 977px) {
   #navbarNavDropdown {
     display: none !important;
   }
+}
+
+.logo-row,
+.navbar-toggler {
+  display: flex;
+  /* Aligns logo container and toggle button */
+  justify-content: space-between;
+  /* Adjusts the spacing, if needed */
+  align-items: center;
+  /* Ensures they are centrally aligned vertically */
+}
+
+.navbar-toggler {
+  margin-left: auto;
+  /* Pushes the toggle button to the right */
 }
 
 .navbar-toggler .close-btn {
@@ -849,6 +475,67 @@
   background: transparent;
 }
 
-.navbar-collapse {
+@media (max-width: 980px) {
+  .secondary-nav-container {
+    display: none !important;
+    margin-top: -8px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.language {
+  background-color: #f1f1f1;
+  /* padding: 4px 8px;  */
+  height: 30px;
+  border-radius: 10px;
+}
+
+.contact {
+  background-color: #ffffff;
+  /* padding: 4px 8px;  */
+  height: 30px;
+  border-radius: 10px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Hide .contact on screens up to 987px */
+@media (max-width: 987px) {
+  .contact {
+    display: none !important;
+  }
+}
+
+/* Optional: Ensure .contact is visible on larger screens */
+@media (min-width: 988px) {
+  .contact {
+    display: flex !important;
+  }
+}
+.drop-down-mob {
+  background-color: #f1f1f1;
+}
+
+.desktop-header {
+  display: block;
+}
+
+app-mobile-header {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .desktop-header {
+    display: none;
+  }
+
+  app-mobile-header {
+    display: block;
+  }
 }
