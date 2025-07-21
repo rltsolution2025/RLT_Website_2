@@ -21,7 +21,7 @@
       +91 89255 00513
     </a>
   </small>
-</div>
+<!-- removed extra closing div to fix tag error -->
 
 <div class="d-flex align-items-center custom-bg px-0 py-1 bg-white text-navy">
   <div class="container-fluid px-3">
@@ -39,88 +39,45 @@
       <ul class="navbar-nav custom-menu-left d-flex flex-row align-items-center justify-content-end gap-1 flex-nowrap w-100">
         <li class="nav-item">
           <a class="nav-link" routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-
-      <ul
-        class="navbar-nav custom-menu-left d-flex flex-row align-items-center justify-content-end gap-1 flex-nowrap w-100">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/home" routerLinkActive="active-link"
-            [routerLinkActiveOptions]="{ exact: true }">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" (click)="toggleDropdown('tnusrb', $event)">TNUSRB</a>
           <ul class="dropdown-menu" [class.show]="isDropdownOpen('tnusrb')">
-
             <li><a class="dropdown-item" routerLink="/tnusrb-police-constable" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">TNUSRB - Police Constable</a></li>
             <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">TNUSRB - Sub Inspector</a></li>
             <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-finger-print" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">TNUSBR - Sub Inspector ( Finger Print )</a></li>
-            <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-finger-print"
-                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">TNUSBR - Sub Inspector (
-                Finger Print )</a></li>
-            <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-technical" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">TNUSBR - Sub Inspector ( Technical )</a></li>
-            <li><a class="dropdown-item" routerLink="/tnfursc-watcher" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Watcher</a></li>
-            <li><a class="dropdown-item" routerLink="/tnfursc-guard" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Guard</a></li>
-            <li><a class="dropdown-item" routerLink="/tnfursc-forester" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Forester</a></li>
+            <li><a class="dropdown-item" routerLink="/tnusrb-sub-inspector-technical" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">TNUSBR - Sub Inspector ( Technical )</a></li>
+            <li><a class="dropdown-item" routerLink="/tnusrb-watcher" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Watcher</a></li>
+            <li><a class="dropdown-item" routerLink="/tnusrb-guard" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Guard</a></li>
+            <li><a class="dropdown-item" routerLink="/tnusrb-forester" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">TNFUSRC - Forester</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" (click)="toggleDropdown('army', $event)"
-            routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Indian Army </a>
+          <a class="nav-link dropdown-toggle" href="#" (click)="toggleDropdown('army', $event)">Indian Army </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="/NDA-Exam" (click)="navigateAndClose('army')"
-                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">NDA Exam</a></li>
-            <li><a class="dropdown-item" routerLink="/CDS-Exam" (click)="navigateAndClose('army')"
-                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">CDS Exam</a></li>
-            <li><a class="dropdown-item" routerLink="/army-general-duty" (click)="navigateAndClose('army')"
-                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Army General
-                Duty</a></li>
-            <li><a class="dropdown-item" routerLink="/army-tradesman" (click)="navigateAndClose('army')"
-                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Army
-                Tradesmen</a></li>
-            <li><a class="dropdown-item" routerLink="/army-nursing-assistant" (click)="navigateAndClose('army')"
-                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Army
-                Nursing Assistant</a></li>
-            <li><a class="dropdown-item" routerLink="/army-soldier-clerk" (click)="navigateAndClose('army')"
-                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Army
-                Soldier Clerk</a></li>
-            <li><a class="dropdown-item" routerLink="/army-technical" (click)="navigateAndClose('army')"
-                routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Army
-                Technical</a></li>
->>>>>>> cf824d894421684e750fefe6f48f254f60bea8e3
+            <li><a class="dropdown-item" routerLink="/NDA-Exam" (click)="navigateAndClose('army')">NDA Exam</a></li>
+            <li><a class="dropdown-item" routerLink="/CDS-Exam" (click)="navigateAndClose('army')">CDS Exam</a></li>
+            <li><a class="dropdown-item" routerLink="/army-general-duty" (click)="navigateAndClose('army')">Army General Duty</a></li>
+            <li><a class="dropdown-item" routerLink="/army-tradesman" (click)="navigateAndClose('army')">Army Tradesmen</a></li>
+            <li><a class="dropdown-item" routerLink="/army-nursing-assistant" (click)="navigateAndClose('army')">Army Nursing Assistant</a></li>
+            <li><a class="dropdown-item" routerLink="/army-soldier-clerk" (click)="navigateAndClose('army')">Army Soldier Clerk</a></li>
+            <li><a class="dropdown-item" routerLink="/army-technical" (click)="navigateAndClose('army')">Army Technical</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" (click)="toggleDropdown('navy', $event)">Indian Navy</a>
           <ul class="dropdown-menu">
-
             <li><a class="dropdown-item" routerLink="/navy-mr" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Navy MR</a></li>
             <li><a class="dropdown-item" routerLink="/navy-technical-ssr" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Navy Technical SSR</a></li>
             <li><a class="dropdown-item" routerLink="/navy-technical-aa" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Navy Technical AA</a></li>
             <li><a class="dropdown-item" routerLink="/indian-coast-guard" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Indian Coast Guard</a></li>
             <li><a class="dropdown-item" routerLink="/indian-coast-guard-navik-gd" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Indian Coast Guard Navik ( GD )</a></li>
             <li><a class="dropdown-item" routerLink="/indian-coast-guard-navik-db" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Indian Coast Guard Navik ( DB )</a></li>
-
-            <li><a class="dropdown-item" routerLink="/navy-mr" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">Navy MR</a></li>
-            <li><a class="dropdown-item" routerLink="/navy-technical-ssr" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">Navy Technical SSR</a></li>
-            <li><a class="dropdown-item" routerLink="/navy-technical-aa" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">Navy Technical AA</a></li>
-            <li><a class="dropdown-item" routerLink="/indian-coast-guard" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">Indian Coast Guard</a></li>
-            <li><a class="dropdown-item" routerLink="/indian-coast-guard-navik-gd" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">Indian Coast Guard Navik ( GD )</a></li>
-            <li><a class="dropdown-item" routerLink="/indian-coast-guard-navik-db" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">Indian Coast Guard Navik ( DB )</a></li>
-
           </ul>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" (click)="toggleDropdown('airforce', $event)">Indian Air Force</a>
           <ul class="dropdown-menu">
-
             <li><a class="dropdown-item" routerLink="/indian-air-force-group-x-y" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Indian Air Force ( Group X & Y )</a></li>
             <li><a class="dropdown-item" routerLink="/indian-air-force-group-x" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Indian Air Force ( Group X )</a></li>
             <li><a class="dropdown-item" routerLink="/indian-air-force-group-y" routerLinkActive="active-dropdown" [routerLinkActiveOptions]="{ exact: true }">Indian Air Force ( Group Y )</a></li>
@@ -281,16 +238,8 @@
   </li>
 </div>
 
-            <li><a class="dropdown-item" routerLink="/indian-air-force-group-x-y" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">Indian Air Force ( Group X & Y )</a></li>
-            <li><a class="dropdown-item" routerLink="/indian-air-force-group-x" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">Indian Air Force ( Group X )</a></li>
-            <li><a class="dropdown-item" routerLink="/indian-air-force-group-y" routerLinkActive="active-dropdown"
-                [routerLinkActiveOptions]="{ exact: true }">Indian Air Force ( Group Y )</a></li>
-          </ul>
-        </li>
-      </ul>
-       <app-mobile-header ></app-mobile-header>
+      <!-- Removed duplicate/erroneous closing tags and extra list -->
+      <app-mobile-header ></app-mobile-header>
       <!--<div class="d-md-none">
         <button class="navbar-toggler custom-toggler d-block d-lg-none" type="button"
           (click)="$event.stopPropagation(); toggleMenu()">
